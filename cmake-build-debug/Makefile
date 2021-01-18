@@ -68,10 +68,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dennis/CLionProjects/Project-3
+CMAKE_SOURCE_DIR = /home/treloubas76/CLionProjects/Project-3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dennis/CLionProjects/Project-3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/treloubas76/CLionProjects/Project-3/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,59 +143,32 @@ Project_3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/build
 .PHONY : Project_3/fast
 
-Job.o: Job.cpp.o
+JobScheduler.o: JobScheduler.cpp.o
 
-.PHONY : Job.o
-
-# target to build an object file
-Job.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.o
-.PHONY : Job.cpp.o
-
-Job.i: Job.cpp.i
-
-.PHONY : Job.i
-
-# target to preprocess a source file
-Job.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.i
-.PHONY : Job.cpp.i
-
-Job.s: Job.cpp.s
-
-.PHONY : Job.s
-
-# target to generate assembly for a file
-Job.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.s
-.PHONY : Job.cpp.s
-
-Queue.o: Queue.cpp.o
-
-.PHONY : Queue.o
+.PHONY : JobScheduler.o
 
 # target to build an object file
-Queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.o
-.PHONY : Queue.cpp.o
+JobScheduler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.o
+.PHONY : JobScheduler.cpp.o
 
-Queue.i: Queue.cpp.i
+JobScheduler.i: JobScheduler.cpp.i
 
-.PHONY : Queue.i
+.PHONY : JobScheduler.i
 
 # target to preprocess a source file
-Queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.i
-.PHONY : Queue.cpp.i
+JobScheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.i
+.PHONY : JobScheduler.cpp.i
 
-Queue.s: Queue.cpp.s
+JobScheduler.s: JobScheduler.cpp.s
 
-.PHONY : Queue.s
+.PHONY : JobScheduler.s
 
 # target to generate assembly for a file
-Queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.s
-.PHONY : Queue.cpp.s
+JobScheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.s
+.PHONY : JobScheduler.cpp.s
 
 main.o: main.cpp.o
 
@@ -233,12 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project_3"
-	@echo "... Job.o"
-	@echo "... Job.i"
-	@echo "... Job.s"
-	@echo "... Queue.o"
-	@echo "... Queue.i"
-	@echo "... Queue.s"
+	@echo "... JobScheduler.o"
+	@echo "... JobScheduler.i"
+	@echo "... JobScheduler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

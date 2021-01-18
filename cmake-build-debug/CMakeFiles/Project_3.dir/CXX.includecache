@@ -6,21 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/dennis/CLionProjects/Project-3/Job.cpp
-Job.h
-/home/dennis/CLionProjects/Project-3/Job.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
 iostream
 -
+thread
+-
+JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 
-/home/dennis/CLionProjects/Project-3/Job.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+thread
+-
 
-/home/dennis/CLionProjects/Project-3/main.cpp
+/home/treloubas76/CLionProjects/Project-3/main.cpp
 iostream
 -
 cstdlib
 -
 thread
 -
-Job.h
-/home/dennis/CLionProjects/Project-3/Job.h
+unistd.h
+-
+JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 

@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread")
 
 
-add_executable(Project_3 main.cpp Job.cpp Job.h Queue.cpp Queue.h)
+add_executable(Project_3 main.cpp JobScheduler.cpp)

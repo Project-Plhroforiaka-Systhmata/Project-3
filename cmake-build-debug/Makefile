@@ -143,6 +143,33 @@ Project_3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/build
 .PHONY : Project_3/fast
 
+Job.o: Job.cpp.o
+
+.PHONY : Job.o
+
+# target to build an object file
+Job.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.o
+.PHONY : Job.cpp.o
+
+Job.i: Job.cpp.i
+
+.PHONY : Job.i
+
+# target to preprocess a source file
+Job.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.i
+.PHONY : Job.cpp.i
+
+Job.s: Job.cpp.s
+
+.PHONY : Job.s
+
+# target to generate assembly for a file
+Job.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.s
+.PHONY : Job.cpp.s
+
 JobScheduler.o: JobScheduler.cpp.o
 
 .PHONY : JobScheduler.o
@@ -169,6 +196,33 @@ JobScheduler.s: JobScheduler.cpp.s
 JobScheduler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.s
 .PHONY : JobScheduler.cpp.s
+
+Queue.o: Queue.cpp.o
+
+.PHONY : Queue.o
+
+# target to build an object file
+Queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.o
+.PHONY : Queue.cpp.o
+
+Queue.i: Queue.cpp.i
+
+.PHONY : Queue.i
+
+# target to preprocess a source file
+Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.i
+.PHONY : Queue.cpp.i
+
+Queue.s: Queue.cpp.s
+
+.PHONY : Queue.s
+
+# target to generate assembly for a file
+Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.s
+.PHONY : Queue.cpp.s
 
 main.o: main.cpp.o
 
@@ -206,9 +260,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project_3"
+	@echo "... Job.o"
+	@echo "... Job.i"
+	@echo "... Job.s"
 	@echo "... JobScheduler.o"
 	@echo "... JobScheduler.i"
 	@echo "... JobScheduler.s"
+	@echo "... Queue.o"
+	@echo "... Queue.i"
+	@echo "... Queue.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -63,10 +63,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/treloubas76/CLionProjects/Project-3
+CMAKE_SOURCE_DIR = /home/dennis/CLionProjects/Project-3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/treloubas76/CLionProjects/Project-3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dennis/CLionProjects/Project-3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project_3.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/Project_3.dir/flags.make
 
 CMakeFiles/Project_3.dir/main.cpp.o: CMakeFiles/Project_3.dir/flags.make
 CMakeFiles/Project_3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_3.dir/main.cpp.o -c /home/treloubas76/CLionProjects/Project-3/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_3.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_3.dir/main.cpp.o -c /home/dennis/CLionProjects/Project-3/main.cpp
 
 CMakeFiles/Project_3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/treloubas76/CLionProjects/Project-3/main.cpp > CMakeFiles/Project_3.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dennis/CLionProjects/Project-3/main.cpp > CMakeFiles/Project_3.dir/main.cpp.i
 
 CMakeFiles/Project_3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/treloubas76/CLionProjects/Project-3/main.cpp -o CMakeFiles/Project_3.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dennis/CLionProjects/Project-3/main.cpp -o CMakeFiles/Project_3.dir/main.cpp.s
 
 CMakeFiles/Project_3.dir/JobScheduler.cpp.o: CMakeFiles/Project_3.dir/flags.make
 CMakeFiles/Project_3.dir/JobScheduler.cpp.o: ../JobScheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_3.dir/JobScheduler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_3.dir/JobScheduler.cpp.o -c /home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_3.dir/JobScheduler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_3.dir/JobScheduler.cpp.o -c /home/dennis/CLionProjects/Project-3/JobScheduler.cpp
 
 CMakeFiles/Project_3.dir/JobScheduler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_3.dir/JobScheduler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp > CMakeFiles/Project_3.dir/JobScheduler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dennis/CLionProjects/Project-3/JobScheduler.cpp > CMakeFiles/Project_3.dir/JobScheduler.cpp.i
 
 CMakeFiles/Project_3.dir/JobScheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_3.dir/JobScheduler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp -o CMakeFiles/Project_3.dir/JobScheduler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dennis/CLionProjects/Project-3/JobScheduler.cpp -o CMakeFiles/Project_3.dir/JobScheduler.cpp.s
 
 # Object files for target Project_3
 Project_3_OBJECTS = \
@@ -115,7 +115,7 @@ Project_3: CMakeFiles/Project_3.dir/main.cpp.o
 Project_3: CMakeFiles/Project_3.dir/JobScheduler.cpp.o
 Project_3: CMakeFiles/Project_3.dir/build.make
 Project_3: CMakeFiles/Project_3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project_3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project_3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/Project_3.dir/clean:
 .PHONY : CMakeFiles/Project_3.dir/clean
 
 CMakeFiles/Project_3.dir/depend:
-	cd /home/treloubas76/CLionProjects/Project-3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/treloubas76/CLionProjects/Project-3 /home/treloubas76/CLionProjects/Project-3 /home/treloubas76/CLionProjects/Project-3/cmake-build-debug /home/treloubas76/CLionProjects/Project-3/cmake-build-debug /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/Project_3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dennis/CLionProjects/Project-3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dennis/CLionProjects/Project-3 /home/dennis/CLionProjects/Project-3 /home/dennis/CLionProjects/Project-3/cmake-build-debug /home/dennis/CLionProjects/Project-3/cmake-build-debug /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/Project_3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Project_3.dir/depend
 

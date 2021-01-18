@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/treloubas76/CLionProjects/Project-3/main.cpp
+/home/dennis/CLionProjects/Project-3/Job.cpp
+Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
+iostream
+-
+
+/home/dennis/CLionProjects/Project-3/Job.h
+
+/home/dennis/CLionProjects/Project-3/main.cpp
 iostream
 -
 cstdlib
 -
 thread
 -
+Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp">
+			<Option target="Project_3"/>
+		</Unit>
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/JobScheduler.h">
+			<Option target="Project_3"/>
+		</Unit>
 		<Unit filename="/home/treloubas76/CLionProjects/Project-3/main.cpp">
 			<Option target="Project_3"/>
 		</Unit>

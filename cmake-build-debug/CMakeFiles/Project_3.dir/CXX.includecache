@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
+iostream
+-
+thread
+-
+JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+thread
+-
+
 /home/treloubas76/CLionProjects/Project-3/main.cpp
 iostream
 -
@@ -13,4 +25,8 @@ cstdlib
 -
 thread
 -
+unistd.h
+-
+JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 

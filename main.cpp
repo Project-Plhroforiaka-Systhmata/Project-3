@@ -1,36 +1,33 @@
 #include <iostream>
 #include <cstdlib>
 #include <thread>
+#include <unistd.h>
+#include "JobScheduler.h"
+
 
 using namespace std;
 
 
-void foo()
-{
-    while (true) {
-        cout << "yo" << endl;
-    }
-}
 
-void bar()
-{
-    while (true) {
-        cout << "men" << endl;
-    }
+
+void test(){
+    cout << 1 << endl;
 }
 
 int main()
 {
-    std::thread first (foo);     // spawn new thread that calls foo()
-    std::thread second (bar);  // spawn new thread that calls bar(0)
-
-
+    //thread first (test);     // spawn new thread that calls foo()
+    //std::thread second (bar);  // spawn new thread that calls bar(0)
+    /// << first.get_id() << endl;
+    JobScheduler *scheduler = new JobScheduler(5);
 
     // synchronize threads:
-    first.join();                // pauses until first finishes
-    second.join();               // pauses until second finishes
+    //first.join();                // pauses until first finishes
+    //second.join();               // pauses until second finishes
 
-    std::cout << "foo and bar completed.\n";
+    //pthread_mutex_lock(&lock);
+    //pthread_mutex_unlock(&lock);
+    //pthread_mutex_destroy(&lock);
 
     return 0;
 }

@@ -1,5 +1,5 @@
 //
-// Created by treloubas76 on 1/18/21.
+// Created by dennis on 1/18/21.
 //
 
 #include "Queue.h"
@@ -8,7 +8,7 @@ Queue::Queue():size(0), front(nullptr), rear(nullptr) {
 
 }
 
-void Queue::insert(Job *newJob) {
+void Queue::push(Job *newJob) {
     auto *newNode = new qNode;
     newNode->myJob = newJob;
     if(!size){

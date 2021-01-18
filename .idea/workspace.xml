@@ -12,8 +12,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_1_21,_1_53_μ_μ__[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_1_21,_1_53_μ_μ__[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScheduler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/JobScheduler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScheduler.h" beforeDir="false" afterPath="$PROJECT_DIR$/JobScheduler.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/Project_3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/Project_3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##Job.cpp.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##Job.cpp.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##alloc_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##alloc_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##basic_string.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##basic_string.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##basic_string.tcc.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##basic_string.tcc.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##move.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##move.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##new_allocator.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##new_allocator.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##stl_iterator_base_funcs.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##stl_iterator_base_funcs.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##stl_iterator_base_types.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##stl_iterator_base_types.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##type_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Job.cpp.gcda##type_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##JobScheduler.cpp.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##JobScheduler.cpp.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##alloc_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##alloc_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##allocator.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##allocator.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##cpp_type_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##cpp_type_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##deque.tcc.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##deque.tcc.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##invoke.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##invoke.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##move.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##move.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##new.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##new.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##new_allocator.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##new_allocator.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_algobase.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_algobase.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_construct.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_construct.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_deque.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_deque.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator_base_funcs.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator_base_funcs.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator_base_types.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_iterator_base_types.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_queue.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_queue.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_uninitialized.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##stl_uninitialized.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##thread.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##thread.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##tuple.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##tuple.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##unique_ptr.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/JobScheduler.cpp.gcda##unique_ptr.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Queue.cpp.gcda##Queue.cpp.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/Queue.cpp.gcda##Queue.cpp.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##basic_string.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##basic_string.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##basic_string.tcc.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##basic_string.tcc.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##char_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##char_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##main.cpp.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##main.cpp.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##new_allocator.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##new_allocator.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##stl_iterator_base_funcs.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##stl_iterator_base_funcs.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##stl_iterator_base_types.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##stl_iterator_base_types.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##type_traits.h.gcov" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-coverage/coverage/main.cpp.gcda##type_traits.h.gcov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Project_3.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +126,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -81,6 +147,7 @@
       <workItem from="1610960467495" duration="209000" />
       <workItem from="1610960697294" duration="18000" />
       <workItem from="1610960734254" duration="4169000" />
+      <workItem from="1610970933382" duration="6225000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610659608842</created>

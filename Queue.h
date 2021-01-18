@@ -1,5 +1,5 @@
 //
-// Created by treloubas76 on 1/18/21.
+// Created by dennis on 1/18/21.
 //
 
 #ifndef PROJECT_3_QUEUE_H
@@ -18,7 +18,7 @@ public:
     int size;
     qNode *front, *rear;
     Queue();
-    void insert(Job*);
+    void push(Job*);
     Job *pop();
     ~Queue();
 };

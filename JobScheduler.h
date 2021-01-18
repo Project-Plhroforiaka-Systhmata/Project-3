@@ -12,8 +12,8 @@ using namespace std;
 class JobScheduler {
 public:
     int execution_threads;
-    //Queue *queue;
-    std::queue<Job*> queue;
+    Queue *queue;
+    //std::queue<Job*> queue;
     thread::id* tids;
     JobScheduler();
     JobScheduler(int numThreads);

@@ -10,7 +10,8 @@
 
 using namespace std;
 
-queue<Job*> myqueue;
+Queue *myqueue;
+//queue<Job*> myqueue;
 pthread_mutex_t lock1; //first mutex
 thread **threads;
 bool destroyThreads = false;
@@ -19,11 +20,11 @@ std::time_t now = std::time(nullptr);
 
 
 Job *getJobInFIFO() {
-    if (myqueue.size() == 0)
+    if (myqueue->size == 0)
         return nullptr;
 
-    Job *tmp = myqueue.front();
-    myqueue.pop();
+    Job *tmp; //= myqueue->getFront();
+    tmp = myqueue->pop();
     return tmp;
     //Job *torun = myqueue->pop();
     //return torun;
@@ -68,6 +69,7 @@ JobScheduler::JobScheduler() {
 }
 
 JobScheduler::JobScheduler(int numThreads) {
+    pthread_mutex_init(&lock1, NULL);
     initialize_scheduler(numThreads);
 }
 
@@ -75,7 +77,7 @@ JobScheduler::JobScheduler(int numThreads) {
 JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
     execution_threads = numThreads;
     tids = new thread::id[5];
-    //queue = new Queue();
+    queue = new Queue();
     myqueue = queue;
     createThreads(execution_threads,tids);
     return nullptr;
@@ -83,7 +85,7 @@ JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
 }
 
 int JobScheduler::submit_job( Job *j) {
-    myqueue.push(j);
+    myqueue->push(j);
     return 0;
 }
 
@@ -116,7 +118,7 @@ JobScheduler::~JobScheduler() {
     }
     delete[] threads;
     //
-    // delete myqueue;
+    delete queue;
     delete[] tids;
 }
 

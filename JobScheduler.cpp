@@ -4,43 +4,49 @@
 #include <unistd.h>
 #include "JobScheduler.h"
 #include "Queue.h"
+#include "ctime"
 
 
 
 using namespace std;
 
-Queue* myqueue;
+queue<Job*> myqueue;
 pthread_mutex_t lock1; //first mutex
 thread **threads;
 bool destroyThreads = false;
+std::time_t start = std::time(nullptr);
+std::time_t now = std::time(nullptr);
+
 
 Job *getJobInFIFO() {
+    if (myqueue.size() == 0)
+        return nullptr;
 
-    pthread_mutex_lock(&lock1);
-
-    Job *torun = myqueue->pop();
-
-    pthread_mutex_unlock(&lock1);
-
-    return torun;
-
-
+    Job *tmp = myqueue.front();
+    myqueue.pop();
+    return tmp;
+    //Job *torun = myqueue->pop();
+    //return torun;
 }
 
 
 void thread_execute(){
-    while (true && !destroyThreads){
+    while ((now - start) < 6){
+
+        pthread_mutex_lock(&lock1);
+        now = std::time(nullptr);
         Job *toexecute = getJobInFIFO();
+        pthread_mutex_unlock(&lock1);
         if (toexecute != nullptr){
             //toexecute call functon reference
             toexecute->executeJob();
             delete toexecute;
         }
     }
-    if (destroyThreads)
-        cout << "Thread Terminated" << endl;
-    else
-        cout << "Thread Exited" << endl;
+    //if (destroyThreads)
+        //cout << "Thread Terminated" << endl;
+    //else
+        //cout << "Thread Exited" << endl;
 
 }
 
@@ -69,7 +75,7 @@ JobScheduler::JobScheduler(int numThreads) {
 JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
     execution_threads = numThreads;
     tids = new thread::id[5];
-    queue = new Queue();
+    //queue = new Queue();
     myqueue = queue;
     createThreads(execution_threads,tids);
     return nullptr;
@@ -77,7 +83,7 @@ JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
 }
 
 int JobScheduler::submit_job( Job *j) {
-    queue->insert(j);
+    myqueue.push(j);
     return 0;
 }
 
@@ -104,12 +110,13 @@ int JobScheduler::destroy_scheduler() {
 JobScheduler::~JobScheduler() {
     pthread_mutex_destroy(&lock1);
     for (int i = 0 ; i < execution_threads; i++){
-        threads[i]->detach();
+        if (threads[i]->joinable())
+            threads[i]->detach();
         delete threads[i];
     }
-    usleep(500);
     delete[] threads;
-    delete myqueue;
+    //
+    // delete myqueue;
     delete[] tids;
 }
 

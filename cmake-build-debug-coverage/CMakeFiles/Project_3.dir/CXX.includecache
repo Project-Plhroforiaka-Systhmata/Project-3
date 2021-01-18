@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/treloubas76/CLionProjects/Project-3/Job.h
+string
+-
+
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
+iostream
+-
+thread
+-
+csignal
+-
+unistd.h
+-
+JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
+ctime
+/home/treloubas76/CLionProjects/Project-3/ctime
+
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+thread
+-
+queue
+-
+Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
+
+/home/treloubas76/CLionProjects/Project-3/Queue.h
+Job.h
+/home/treloubas76/CLionProjects/Project-3/Job.h
+

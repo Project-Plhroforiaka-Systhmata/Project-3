@@ -1,0 +1,55 @@
+Index: cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/home/treloubas76/CLionProjects/Project-3/Job.h\nstring\n-\n\n/home/treloubas76/CLionProjects/Project-3/Queue.cpp\nQueue.h\n/home/treloubas76/CLionProjects/Project-3/Queue.h\n\n/home/treloubas76/CLionProjects/Project-3/Queue.h\nJob.h\n/home/treloubas76/CLionProjects/Project-3/Job.h\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache b/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache
+--- a/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache	(revision ca81002e015b6620e4877318798fde894c926ea3)
++++ b/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache	(date 1610970752282)
+@@ -10,6 +10,28 @@
+ string
+ -
+ 
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
++iostream
++-
++thread
++-
++csignal
++-
++unistd.h
++-
++JobScheduler.h
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
++Queue.h
++/home/treloubas76/CLionProjects/Project-3/Queue.h
++
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
++thread
++-
++queue
++-
++Queue.h
++/home/treloubas76/CLionProjects/Project-3/Queue.h
++
+ /home/treloubas76/CLionProjects/Project-3/Queue.cpp
+ Queue.h
+ /home/treloubas76/CLionProjects/Project-3/Queue.h
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Jan 18 13:46 EET\n----------------------------------------------------------\nEnd testing: Jan 18 13:46 EET\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	(revision ca81002e015b6620e4877318798fde894c926ea3)
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	(date 1610970753041)
+@@ -1,3 +1,3 @@
+-Start testing: Jan 18 13:46 EET
++Start testing: Jan 18 13:52 EET
+ ----------------------------------------------------------
+-End testing: Jan 18 13:46 EET
++End testing: Jan 18 13:52 EET

@@ -31,12 +31,11 @@ int main()
     scheduler->submit_job(new Job("test",tmp));
     tmp.a++;
 
+    scheduler->wait_all_tasks_finish();
 
-    //scheduler->wait_all_tasks_finish();
-    sleep(1);
-    scheduler->destroy_scheduler();
     delete scheduler;
-    sleep(1);
+
+    sleep(2);
 
 
     return 0;

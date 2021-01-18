@@ -4,7 +4,48 @@
 
 using namespace std;
 
+queue<Job*> myqueue;
+pthread_mutex_t lock1; //first mutex
+thread **threads;
 
+Job *getJobInFIFO() {
+    if (myqueue.size() == 0){
+        return nullptr;
+    }
+    pthread_mutex_lock(&lock1);
+    Job *torun = myqueue.front();
+    myqueue.pop();
+    pthread_mutex_unlock(&lock1);
+
+    return torun;
+
+
+}
+
+
+void thread_execute(){
+    while (true){
+        Job *toexecute = getJobInFIFO();
+        if (toexecute != nullptr){
+            //toexecute call functon reference
+            toexecute->executeJob();
+        }
+    }
+}
+
+void createThreads(int num,thread::id *tids){
+    threads = new thread*[num];
+    for (int i  = 0 ; i < num; i++){
+        threads[i] = new thread(thread_execute);
+        tids[i] = threads[i]->get_id();
+    }
+    // synchronize threads:
+    cout << "Main Thread: Waiting Threads to finish" << endl;
+    for (int i  = 0 ; i < num; i++){
+        threads[i]->join();
+    }
+
+}
 
 JobScheduler::JobScheduler() {
     execution_threads = 1;
@@ -17,15 +58,13 @@ JobScheduler::JobScheduler(int numThreads) {
     initialize_scheduler(numThreads);
 }
 
+
 JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
     execution_threads = numThreads;
     tids = new thread::id[5];
-
-    for (int i  = 0 ; i < execution_threads; i++){
-        thread newthread;
-        tids[i] = newthread.get_id();
-    }
-
+    myqueue = queue;
+    createThreads(execution_threads,tids);
+    return nullptr;
 
 }
 
@@ -45,25 +84,8 @@ int JobScheduler::destroy_scheduler(JobScheduler *sch) {
     return 0;
 }
 
-Job *JobScheduler::getJobInFIFO() {
-    pthread_mutex_lock(&lock1);
-
-        Job *torun = queue.front();
-        queue.pop();
-
-    pthread_mutex_unlock(&lock1);
-    return torun;
-}
 
 JobScheduler::~JobScheduler() {
     pthread_mutex_destroy(&lock1);
 }
 
-Job * JobScheduler::thread_execute(){
-    while (true){
-        Job *toexecute = getJobInFIFO();
-        if (toexecute != nullptr){
-            //toexecute call functon reference
-        }
-    }
-}

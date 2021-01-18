@@ -8,14 +8,19 @@
 
 struct qNode{
     Job *myJob;
-    qNode *next;
+    qNode *next = nullptr;
+    qNode *prev = nullptr;
 };
 
 
 class Queue {
 public:
-
-
+    int size;
+    qNode *front, *rear;
+    Queue();
+    void insert(Job*);
+    Job *pop();
+    ~Queue();
 };
 
 

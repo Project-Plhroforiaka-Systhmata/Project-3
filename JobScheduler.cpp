@@ -9,10 +9,11 @@ pthread_mutex_t lock1; //first mutex
 thread **threads;
 
 Job *getJobInFIFO() {
+
+    pthread_mutex_lock(&lock1);
     if (myqueue.size() == 0){
         return nullptr;
     }
-    pthread_mutex_lock(&lock1);
     Job *torun = myqueue.front();
     myqueue.pop();
     pthread_mutex_unlock(&lock1);

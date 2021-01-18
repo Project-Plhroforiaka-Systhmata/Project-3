@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/treloubas76/CLionProjects/Project-3/Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 string
 -
 
-/home/treloubas76/CLionProjects/Project-3/Queue.cpp
+/home/dennis/CLionProjects/Project-3/Queue.cpp
 Queue.h
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 Job.h
-/home/treloubas76/CLionProjects/Project-3/Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 

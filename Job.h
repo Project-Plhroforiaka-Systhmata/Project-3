@@ -4,9 +4,9 @@
 
 using namespace std;
 
-struct arguments{
-
-};
+typedef struct arguments{
+    int a,b;
+}arguemnts;
 
 
 class Job {
@@ -15,7 +15,7 @@ public:
     string jobExe;
     Job(string, arguments);
     void executeJob();
-    void jobFunction(int);
+    int add(int,int);
 };
 
 

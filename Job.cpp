@@ -8,8 +8,11 @@ Job::Job(string myJob, arguments funArgs): jobExe(myJob), args(funArgs) {
 
 
 void Job::executeJob() {
+    if (jobExe == "test"){
+        cout << add(args.a,args.b) << endl;
+    }
 }
 
-void Job::jobFunction(int function) {
-    function;
+int Job::add(int a,int b) {
+    return a+b;
 }

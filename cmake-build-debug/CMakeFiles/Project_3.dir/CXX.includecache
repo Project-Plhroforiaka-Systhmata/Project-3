@@ -10,19 +10,11 @@
 string
 -
 
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
-iostream
--
-thread
--
-JobScheduler.h
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/Queue.cpp
+Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
 
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
-thread
--
-queue
--
+/home/treloubas76/CLionProjects/Project-3/Queue.h
 Job.h
 /home/treloubas76/CLionProjects/Project-3/Job.h
 

@@ -9,7 +9,7 @@ Queue::Queue():size(0), front(nullptr), rear(nullptr) {
 }
 
 void Queue::insert(Job *newJob) {
-    qNode *newNode = new qNode;
+    auto *newNode = new qNode;
     newNode->myJob = newJob;
     if(!size){
         front = newNode;
@@ -26,16 +26,20 @@ void Queue::insert(Job *newJob) {
 Job *Queue::pop() {
     Job *temp;
     if(!size) return nullptr;
-    else if(size) {
+    else if(size == 1) {
         temp = front->myJob;
+        delete front;
         front = nullptr;
         rear = nullptr;
     }
     else{
         temp = front->myJob;
+        qNode *temp2 = front;
         front = front->prev;
+        delete temp2;
         front->next = nullptr;
     }
+    size--;
     return temp;
 }
 
@@ -45,6 +49,7 @@ Queue::~Queue() {
         qNode *temp2;
         temp2 = temp;
         temp = temp->next;
+        delete temp2->myJob;
         delete temp2;
     }
 }

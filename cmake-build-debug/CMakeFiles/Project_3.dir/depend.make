@@ -7,6 +7,7 @@ CMakeFiles/Project_3.dir/Job.cpp.o: ../Job.h
 CMakeFiles/Project_3.dir/JobScheduler.cpp.o: ../Job.h
 CMakeFiles/Project_3.dir/JobScheduler.cpp.o: ../JobScheduler.cpp
 CMakeFiles/Project_3.dir/JobScheduler.cpp.o: ../JobScheduler.h
+CMakeFiles/Project_3.dir/JobScheduler.cpp.o: ../Queue.h
 
 CMakeFiles/Project_3.dir/Queue.cpp.o: ../Job.h
 CMakeFiles/Project_3.dir/Queue.cpp.o: ../Queue.cpp
@@ -14,5 +15,6 @@ CMakeFiles/Project_3.dir/Queue.cpp.o: ../Queue.h
 
 CMakeFiles/Project_3.dir/main.cpp.o: ../Job.h
 CMakeFiles/Project_3.dir/main.cpp.o: ../JobScheduler.h
+CMakeFiles/Project_3.dir/main.cpp.o: ../Queue.h
 CMakeFiles/Project_3.dir/main.cpp.o: ../main.cpp
 

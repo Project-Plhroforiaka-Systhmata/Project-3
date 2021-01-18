@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610965078643</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="queue full">
+      <created>1610966988287</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610966988287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +148,7 @@
     <MESSAGE value="all project files" />
     <MESSAGE value="job and queue" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="queue full" />
+    <option name="LAST_COMMIT_MESSAGE" value="queue full" />
   </component>
 </project>

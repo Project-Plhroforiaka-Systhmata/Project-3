@@ -1,6 +1,6 @@
-        -:    0:Source:/home/treloubas76/CLionProjects/Project-3/main.cpp
-        -:    0:Graph:/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/main.cpp.gcno
-        -:    0:Data:/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/main.cpp.gcda
+        -:    0:Source:/home/dennis/CLionProjects/Project-3/main.cpp
+        -:    0:Graph:/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/main.cpp.gcno
+        -:    0:Data:/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/main.cpp.gcda
         -:    0:Runs:1
         -:    1:#include <iostream>
         -:    2:#include <cstdlib>

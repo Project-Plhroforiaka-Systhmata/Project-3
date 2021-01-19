@@ -68,10 +68,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/treloubas76/CLionProjects/Project-3
+CMAKE_SOURCE_DIR = /home/dennis/CLionProjects/Project-3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/treloubas76/CLionProjects/Project-3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dennis/CLionProjects/Project-3/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Project_3
+# Target rules for targets named Project-3
 
 # Build rule for target.
-Project_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project_3
-.PHONY : Project_3
+Project-3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project-3
+.PHONY : Project-3
 
 # fast build rule for target.
-Project_3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/build
-.PHONY : Project_3/fast
+Project-3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/build
+.PHONY : Project-3/fast
+
+BF.o: BF.cpp.o
+
+.PHONY : BF.o
+
+# target to build an object file
+BF.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/BF.cpp.o
+.PHONY : BF.cpp.o
+
+BF.i: BF.cpp.i
+
+.PHONY : BF.i
+
+# target to preprocess a source file
+BF.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/BF.cpp.i
+.PHONY : BF.cpp.i
+
+BF.s: BF.cpp.s
+
+.PHONY : BF.s
+
+# target to generate assembly for a file
+BF.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/BF.cpp.s
+.PHONY : BF.cpp.s
 
 Job.o: Job.cpp.o
 
@@ -149,7 +176,7 @@ Job.o: Job.cpp.o
 
 # target to build an object file
 Job.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Job.cpp.o
 .PHONY : Job.cpp.o
 
 Job.i: Job.cpp.i
@@ -158,7 +185,7 @@ Job.i: Job.cpp.i
 
 # target to preprocess a source file
 Job.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Job.cpp.i
 .PHONY : Job.cpp.i
 
 Job.s: Job.cpp.s
@@ -167,7 +194,7 @@ Job.s: Job.cpp.s
 
 # target to generate assembly for a file
 Job.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Job.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Job.cpp.s
 .PHONY : Job.cpp.s
 
 JobScheduler.o: JobScheduler.cpp.o
@@ -176,7 +203,7 @@ JobScheduler.o: JobScheduler.cpp.o
 
 # target to build an object file
 JobScheduler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/JobScheduler.cpp.o
 .PHONY : JobScheduler.cpp.o
 
 JobScheduler.i: JobScheduler.cpp.i
@@ -185,7 +212,7 @@ JobScheduler.i: JobScheduler.cpp.i
 
 # target to preprocess a source file
 JobScheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/JobScheduler.cpp.i
 .PHONY : JobScheduler.cpp.i
 
 JobScheduler.s: JobScheduler.cpp.s
@@ -194,7 +221,7 @@ JobScheduler.s: JobScheduler.cpp.s
 
 # target to generate assembly for a file
 JobScheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/JobScheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/JobScheduler.cpp.s
 .PHONY : JobScheduler.cpp.s
 
 Queue.o: Queue.cpp.o
@@ -203,7 +230,7 @@ Queue.o: Queue.cpp.o
 
 # target to build an object file
 Queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Queue.cpp.o
 .PHONY : Queue.cpp.o
 
 Queue.i: Queue.cpp.i
@@ -212,7 +239,7 @@ Queue.i: Queue.cpp.i
 
 # target to preprocess a source file
 Queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Queue.cpp.i
 .PHONY : Queue.cpp.i
 
 Queue.s: Queue.cpp.s
@@ -221,8 +248,89 @@ Queue.s: Queue.cpp.s
 
 # target to generate assembly for a file
 Queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/Queue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/Queue.cpp.s
 .PHONY : Queue.cpp.s
+
+bucket.o: bucket.cpp.o
+
+.PHONY : bucket.o
+
+# target to build an object file
+bucket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/bucket.cpp.o
+.PHONY : bucket.cpp.o
+
+bucket.i: bucket.cpp.i
+
+.PHONY : bucket.i
+
+# target to preprocess a source file
+bucket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/bucket.cpp.i
+.PHONY : bucket.cpp.i
+
+bucket.s: bucket.cpp.s
+
+.PHONY : bucket.s
+
+# target to generate assembly for a file
+bucket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/bucket.cpp.s
+.PHONY : bucket.cpp.s
+
+hashTable.o: hashTable.cpp.o
+
+.PHONY : hashTable.o
+
+# target to build an object file
+hashTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/hashTable.cpp.o
+.PHONY : hashTable.cpp.o
+
+hashTable.i: hashTable.cpp.i
+
+.PHONY : hashTable.i
+
+# target to preprocess a source file
+hashTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/hashTable.cpp.i
+.PHONY : hashTable.cpp.i
+
+hashTable.s: hashTable.cpp.s
+
+.PHONY : hashTable.s
+
+# target to generate assembly for a file
+hashTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/hashTable.cpp.s
+.PHONY : hashTable.cpp.s
+
+list.o: list.cpp.o
+
+.PHONY : list.o
+
+# target to build an object file
+list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/list.cpp.o
+.PHONY : list.cpp.o
+
+list.i: list.cpp.i
+
+.PHONY : list.i
+
+# target to preprocess a source file
+list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/list.cpp.i
+.PHONY : list.cpp.i
+
+list.s: list.cpp.s
+
+.PHONY : list.s
+
+# target to generate assembly for a file
+list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/list.cpp.s
+.PHONY : list.cpp.s
 
 main.o: main.cpp.o
 
@@ -230,7 +338,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -239,7 +347,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -248,8 +356,89 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_3.dir/build.make CMakeFiles/Project_3.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+negativeList.o: negativeList.cpp.o
+
+.PHONY : negativeList.o
+
+# target to build an object file
+negativeList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/negativeList.cpp.o
+.PHONY : negativeList.cpp.o
+
+negativeList.i: negativeList.cpp.i
+
+.PHONY : negativeList.i
+
+# target to preprocess a source file
+negativeList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/negativeList.cpp.i
+.PHONY : negativeList.cpp.i
+
+negativeList.s: negativeList.cpp.s
+
+.PHONY : negativeList.s
+
+# target to generate assembly for a file
+negativeList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/negativeList.cpp.s
+.PHONY : negativeList.cpp.s
+
+vector.o: vector.cpp.o
+
+.PHONY : vector.o
+
+# target to build an object file
+vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vector.cpp.o
+.PHONY : vector.cpp.o
+
+vector.i: vector.cpp.i
+
+.PHONY : vector.i
+
+# target to preprocess a source file
+vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vector.cpp.i
+.PHONY : vector.cpp.i
+
+vector.s: vector.cpp.s
+
+.PHONY : vector.s
+
+# target to generate assembly for a file
+vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vector.cpp.s
+.PHONY : vector.cpp.s
+
+vertex.o: vertex.cpp.o
+
+.PHONY : vertex.o
+
+# target to build an object file
+vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vertex.cpp.o
+.PHONY : vertex.cpp.o
+
+vertex.i: vertex.cpp.i
+
+.PHONY : vertex.i
+
+# target to preprocess a source file
+vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vertex.cpp.i
+.PHONY : vertex.cpp.i
+
+vertex.s: vertex.cpp.s
+
+.PHONY : vertex.s
+
+# target to generate assembly for a file
+vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/vertex.cpp.s
+.PHONY : vertex.cpp.s
 
 # Help Target
 help:
@@ -259,7 +448,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Project_3"
+	@echo "... Project-3"
+	@echo "... BF.o"
+	@echo "... BF.i"
+	@echo "... BF.s"
 	@echo "... Job.o"
 	@echo "... Job.i"
 	@echo "... Job.s"
@@ -269,9 +461,27 @@ help:
 	@echo "... Queue.o"
 	@echo "... Queue.i"
 	@echo "... Queue.s"
+	@echo "... bucket.o"
+	@echo "... bucket.i"
+	@echo "... bucket.s"
+	@echo "... hashTable.o"
+	@echo "... hashTable.i"
+	@echo "... hashTable.s"
+	@echo "... list.o"
+	@echo "... list.i"
+	@echo "... list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... negativeList.o"
+	@echo "... negativeList.i"
+	@echo "... negativeList.s"
+	@echo "... vector.o"
+	@echo "... vector.i"
+	@echo "... vector.s"
+	@echo "... vertex.o"
+	@echo "... vertex.i"
+	@echo "... vertex.s"
 .PHONY : help
 
 

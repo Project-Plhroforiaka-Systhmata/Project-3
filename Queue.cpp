@@ -1,8 +1,8 @@
-//
-// Created by dennis on 1/18/21.
-//
 
+#include <iostream>
 #include "Queue.h"
+
+
 
 Queue::Queue():size(0), front(nullptr), rear(nullptr) {
 
@@ -24,6 +24,7 @@ void Queue::push(Job *newJob) {
 }
 
 Job *Queue::pop() {
+    //std::cout << "start" << std::endl;
     Job *temp;
     if(!size) return nullptr;
     else if(size == 1) {
@@ -40,6 +41,7 @@ Job *Queue::pop() {
         front->next = nullptr;
     }
     size--;
+    //std::cout << "stop" << std::endl;
     return temp;
 }
 

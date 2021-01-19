@@ -16,22 +16,38 @@ int main()
     tmp.b = 3;
     auto *scheduler = new JobScheduler(5);
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    Job *tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
     tmp.a++;
-    scheduler->submit_job(new Job("test",tmp));
-    tmp.a++;
+    tmpjob = new Job("test",tmp);
+    scheduler->submit_job(tmpjob);
+    
 
-    scheduler->wait_all_tasks_finish();
+
+    //scheduler->wait_all_tasks_finish();
+    sleep(2);
+    scheduler->destroy_scheduler();
 
     delete scheduler;
 

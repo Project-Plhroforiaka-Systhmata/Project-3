@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage"/>
+				<Option working_dir="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage"/>
+				<Option working_dir="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage"/>
+				<Option working_dir="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_3">
-				<Option output="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Project_3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage"/>
+				<Option output="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Project_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 Project_3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 Project_3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_3/fast">
-				<Option output="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Project_3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage"/>
+				<Option output="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Project_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,35 +75,35 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 Project_3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 Project_3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/Job.cpp">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/Job.cpp">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/Job.h">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/Job.h">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/JobScheduler.cpp">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/JobScheduler.h">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/JobScheduler.h">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/Queue.cpp">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/Queue.cpp">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/Queue.h">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/Queue.h">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/main.cpp">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/main.cpp">
 			<Option target="Project_3"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-3/CMakeLists.txt">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

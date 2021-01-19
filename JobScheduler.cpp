@@ -15,8 +15,7 @@ Queue *myqueue;
 pthread_mutex_t lock1; //first mutex
 thread **threads;
 bool destroyThreads = false;
-std::time_t start = std::time(nullptr);
-std::time_t now = std::time(nullptr);
+int threadsTerminated = 0;
 
 
 Job *getJobInFIFO() {
@@ -32,20 +31,26 @@ Job *getJobInFIFO() {
 
 
 void thread_execute(){
-    while ((now - start) < 6){
-
-        pthread_mutex_lock(&lock1);
-        now = std::time(nullptr);
+    while (!destroyThreads){
+        if (pthread_mutex_lock(&lock1) != 0){
+            cout << "An error occurred while locking semaphore" << endl;
+        }
         Job *toexecute = getJobInFIFO();
-        pthread_mutex_unlock(&lock1);
+
         if (toexecute != nullptr){
-            //toexecute call functon reference
+            //toexecute call function reference
             toexecute->executeJob();
             delete toexecute;
         }
+        if (pthread_mutex_unlock(&lock1) != 0){
+            cout << "An error occurred while unlocking semaphore" << endl;
+        }
     }
-    //if (destroyThreads)
-        //cout << "Thread Terminated" << endl;
+    if (destroyThreads){
+        threadsTerminated++;
+        cout << "Thread Terminated" << endl;
+    }
+
     //else
         //cout << "Thread Exited" << endl;
 
@@ -85,7 +90,13 @@ JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
 }
 
 int JobScheduler::submit_job( Job *j) {
+    if (pthread_mutex_lock(&lock1) != 0){
+        cout << "An error occurred while locking semaphore" << endl;
+    }
     myqueue->push(j);
+    if (pthread_mutex_unlock(&lock1) != 0){
+        cout << "An error occurred while locking semaphore" << endl;
+    }
     return 0;
 }
 
@@ -103,13 +114,26 @@ int JobScheduler::wait_all_tasks_finish() {
 }
 
 int JobScheduler::destroy_scheduler() {
+    if (pthread_mutex_lock(&lock1) != 0){
+        cout << "An error occurred while locking semaphore" << endl;
+    }
     destroyThreads = true;
+    if (pthread_mutex_unlock(&lock1) != 0){
+        cout << "An error occurred while unlocking semaphore" << endl;
+    }
+    while (threadsTerminated < execution_threads) {}
 
     return 0;
 }
 
 
 JobScheduler::~JobScheduler() {
+    if (pthread_mutex_lock(&lock1) != 0) {
+        cout << "An error occurred while locking semaphore" << endl;
+    }
+    if (pthread_mutex_unlock(&lock1) != 0){
+        cout << "An error occurred while unlocking semaphore" << endl;
+    }
     pthread_mutex_destroy(&lock1);
     for (int i = 0 ; i < execution_threads; i++){
         if (threads[i]->joinable())

@@ -1,7 +1,7 @@
 Index: cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
-<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/home/dennis/CLionProjects/Project-3/Job.h\nstring\n-\n\n/home/dennis/CLionProjects/Project-3/Queue.cpp\nQueue.h\n/home/dennis/CLionProjects/Project-3/Queue.h\n\n/home/dennis/CLionProjects/Project-3/Queue.h\nJob.h\n/home/dennis/CLionProjects/Project-3/Job.h\n\n
+<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/home/treloubas76/CLionProjects/Project-3/Job.h\nstring\n-\n\n/home/treloubas76/CLionProjects/Project-3/Queue.cpp\nQueue.h\n/home/treloubas76/CLionProjects/Project-3/Queue.h\n\n/home/treloubas76/CLionProjects/Project-3/Queue.h\nJob.h\n/home/treloubas76/CLionProjects/Project-3/Job.h\n\n
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
@@ -12,7 +12,7 @@ diff --git a/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache b/cmake
  string
  -
  
-+/home/dennis/CLionProjects/Project-3/JobScheduler.cpp
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
 +iostream
 +-
 +thread
@@ -22,21 +22,21 @@ diff --git a/cmake-build-debug/CMakeFiles/Project_3.dir/CXX.includecache b/cmake
 +unistd.h
 +-
 +JobScheduler.h
-+/home/dennis/CLionProjects/Project-3/JobScheduler.h
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 +Queue.h
-+/home/dennis/CLionProjects/Project-3/Queue.h
++/home/treloubas76/CLionProjects/Project-3/Queue.h
 +
-+/home/dennis/CLionProjects/Project-3/JobScheduler.h
++/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 +thread
 +-
 +queue
 +-
 +Queue.h
-+/home/dennis/CLionProjects/Project-3/Queue.h
++/home/treloubas76/CLionProjects/Project-3/Queue.h
 +
- /home/dennis/CLionProjects/Project-3/Queue.cpp
+ /home/treloubas76/CLionProjects/Project-3/Queue.cpp
  Queue.h
- /home/dennis/CLionProjects/Project-3/Queue.h
+ /home/treloubas76/CLionProjects/Project-3/Queue.h
 Index: cmake-build-debug/Testing/Temporary/LastTest.log
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP

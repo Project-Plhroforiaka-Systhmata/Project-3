@@ -15,7 +15,7 @@ struct node {
 
 class list {
 public:
-    int printed;
+    int printed,trained;
     node *head, *tail;
     negativeList *negList;
     list();

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-list::list(): printed(0){
+list::list(): printed(0),trained(0){
     head = NULL;
     tail = NULL;
     negList = new negativeList;

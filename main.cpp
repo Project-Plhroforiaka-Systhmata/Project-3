@@ -105,9 +105,11 @@ int main(int argc, char **argv){
 
 
     string word, leftSpecId, rightSpecId, label;
+    int lines_counter=0;
     int count;
     fin.open(argv[2], ios::in);
     while (getline(fin, line)){
+        if(lines_counter==178592) break;
         sigmod_lines++;
         stringstream s(line);
         count = 0;
@@ -137,12 +139,14 @@ int main(int argc, char **argv){
                 vert1->copyList(vert2->specList);
             }
         }
+        lines_counter++;
     }
     fin.close();
 
-
+    lines_counter=0;
     fin.open(argv[2], ios::in);
     while (getline(fin, line)){
+        if(lines_counter==178592) break;
         stringstream s(line);
         count = 0;
         while (getline(s, word, ',')) {
@@ -178,6 +182,7 @@ int main(int argc, char **argv){
                 }
             }
         }
+        lines_counter++;
     }
     fin.close();
 
@@ -376,12 +381,12 @@ int main(int argc, char **argv){
 
     double b = 0.5, w1 = 0, w2 = 0, e = 2.71828, err = 10, minErr = 10, h = 0.01, minw1, minw2;
     fin.open(argv[2], ios::in);
-    int y;
+    //int y;
     int train_lines=0.6*sigmod_lines;
     int templines=0;
 
     //TRAIN
-    while (getline(fin, line)){
+    /*while (getline(fin, line)){
         if(templines==train_lines) break;   //read 60% of csv file for train set
         templines++;
 
@@ -434,18 +439,119 @@ int main(int argc, char **argv){
             w1 = w1 - h * ((pred - y) * x1);
             w2 = w2 - h * ((pred - y) * x2);
         }
+    }*/
+
+    for (int i = 0; i < hash->numBuckets; i++) {
+
+        bucket *temp = hash->table[i];
+        while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                node *temp1;
+                temp1 = temp->records[j].spec->specList->head;
+                while(temp1 != NULL){
+
+                    if (temp1->spec->spec != temp->records[j].spec->spec && !temp1->spec->trained) {
+                        vertex *vert1, *vert2;
+                        vert1 = temp1->spec;
+                        vert2 = temp->records[j].spec;
+
+                        if (vert1 != nullptr && vert2 != nullptr) {
+                            double x1 = 0.0, x2 = 0.0;
+
+                            for(int i = 0; i < vert1->jsonWords->size; i++){
+                                x1 += ((double)vert1->jsonWords->sBuffer[i][1]/vert1->jsonWords->size) * log(hash->size / idfVoc.buffer[vert1->jsonWords->sBuffer[i][0]]);
+                            }
+                            for(int i = 0; i < vert2->jsonWords->size; i++){
+                                x2 += ((double)vert2->jsonWords->sBuffer[i][1]/vert2->jsonWords->size) * log(hash->size / idfVoc.buffer[vert2->jsonWords->sBuffer[i][0]]);
+                            }
+
+                            double p = -(b + w1 * x1 + w2 * x2);
+                            double pred = 1 / (1 + pow(e,p));
+
+                            err = - 1 * log(pred) - (1 - 1) * log(1 - pred);
+                            if(err < minErr){
+                                minErr = err;
+                                minw1 = w1;
+                                minw2 = w2;
+                            }
+
+                            b = b - h * ((pred - 1));
+                            w1 = w1 - h * ((pred - 1) * x1);
+                            w2 = w2 - h * ((pred - 1) * x2);
+                        }
+
+                    }
+                    temp1 = temp1->next;
+                }
+                temp->records[j].spec->trained = 1;
+            }
+            temp = temp->next;
+        }
+    }
+
+    for (int i = 0; i < hash->numBuckets; i++) {
+        bucket *temp = hash->table[i];
+        while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                if(temp->records[j].spec->specList->trained) continue;
+                node *temp1 = temp->records[j].spec->specList->head;
+                while(temp1 != NULL) {   
+                    lnode *temp2 = temp->records[j].spec->specList->negList->head;
+                    while (temp2 != NULL){
+                        //if(temp2->spec == this || temp2->spec->printed){
+                        if(temp2->spec->trained){
+                            temp2 = temp2->next;
+                            continue;
+                        }
+                        node *temp3 = temp2->spec->head;
+                        while(temp3 != NULL){
+                            vertex *vert1, *vert2;
+                            vert1 = temp1->spec;
+                            vert2 = temp3->spec;
+
+                            if (vert1 != nullptr && vert2 != nullptr) {
+                                double x1 = 0.0, x2 = 0.0;
+
+                                for(int i = 0; i < vert1->jsonWords->size; i++){
+                                    x1 += ((double)vert1->jsonWords->sBuffer[i][1]/vert1->jsonWords->size) * log(hash->size / idfVoc.buffer[vert1->jsonWords->sBuffer[i][0]]);
+                                }
+                                for(int i = 0; i < vert2->jsonWords->size; i++){
+                                    x2 += ((double)vert2->jsonWords->sBuffer[i][1]/vert2->jsonWords->size) * log(hash->size / idfVoc.buffer[vert2->jsonWords->sBuffer[i][0]]);
+                                }
+
+                                double p = -(b + w1 * x1 + w2 * x2);
+                                double pred = 1 / (1 + pow(e,p));
+
+                                err = - 0 * log(pred) - (1 - 0) * log(1 - pred);
+                                if(err < minErr){
+                                    minErr = err;
+                                    minw1 = w1;
+                                    minw2 = w2;
+                                }
+
+                                b = b - h * ((pred - 0));
+                                w1 = w1 - h * ((pred - 0) * x1);
+                                w2 = w2 - h * ((pred - 0) * x2);
+                            }
+                            temp3 = temp3->next;
+                        }
+                        temp2 = temp2->next;
+                    }
+                    temp1 = temp1->next;
+                }
+                temp->records[j].spec->specList->trained = 1;
+
+            }
+            temp = temp->next;
+        }
     }
 
     
-
-
-    
     //TEST 
-
+    int y;
     templines=0;
     int success=0;
     while (getline(fin, line)){
-        templines++;
 
         stringstream s(line);
         count = 0;
@@ -470,6 +576,7 @@ int main(int argc, char **argv){
         vert2 = hash->search(rightSpecId);
 
         if (vert1 != nullptr && vert2 != nullptr) {
+            templines++;
             double x1 = 0.0, x2 = 0.0;
             for(int i = 0; i < vert1->jsonWords->size; i++){
                 x1 += ((double)vert1->jsonWords->sBuffer[i][1]/vert1->jsonWords->size) * log(hash->size / idfVoc.buffer[vert1->jsonWords->sBuffer[i][0]]);
@@ -480,21 +587,21 @@ int main(int argc, char **argv){
             double p = -(b + minw1 * x1 + minw2 * x2);
             double pred = 1 / (1 + pow(e,p));
 
-            err = - y * log(pred) - (1 - y) * log(1 - pred);
+            /*err = - y * log(pred) - (1 - y) * log(1 - pred);
             if(err < minErr){
                 minErr = err;
                 minw1 = w1;
                 minw2 = w2;
-            }
-
+            }*/
+            cout<<vert1->spec<<","<<vert2->spec<<": "<<pred << " " << y <<endl;
             if(pred>=0.5) pred=1;
             else pred=0;
             if(pred==y) success++;
-            cout<<vert1->spec<<","<<vert2->spec<<": "<<pred<<endl;
+            //cout<<vert1->spec<<","<<vert2->spec<<": "<<pred<<endl;
             
-            b = b - h * ((pred - y) );
-            w1 = w1 - h * ((pred - y) * x1);
-            w2 = w2 - h * ((pred - y) * x2);
+            //b = b - h * ((pred - y) );
+            //w1 = w1 - h * ((pred - y) * x1);
+            //w2 = w2 - h * ((pred - y) * x2);
 
         }
     }

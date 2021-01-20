@@ -8,7 +8,7 @@ using namespace std;
 
 class vertex {
 public:
-    int printed;
+    int printed,trained;
     string spec, itemSpecs;
     myVector<int> *jsonWords;
     list *specList;

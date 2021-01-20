@@ -4,9 +4,9 @@
 
 using namespace std;
 
-typedef struct arguments{
+struct arguments{
     int a,b;
-}arguemnts;
+};
 
 
 class Job {

@@ -19,6 +19,7 @@ int main(int argc, char **argv){
     fstream fin;
     //string str;
     fin.open("stopwords", ios::in);
+
     string line;
     int ind = 0;
     while (getline(fin, line)){
@@ -49,7 +50,10 @@ int main(int argc, char **argv){
     strcpy(path,argv[1]);
     strcat(path,"/");
     dirp2 = opendir(argv[1]);
-
+    if (dirp2 == nullptr){
+        cout << "Camera Specs Folder Not Found" << endl;
+        return -1;
+    }
 
     while ((entry2 = readdir(dirp2)) != NULL) {
         strcpy(path,argv[1]);

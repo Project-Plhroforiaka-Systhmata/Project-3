@@ -5,6 +5,8 @@
 #include "string.h"
 #include "vector.h"
 #include "BF.h"
+#include "Job.h"
+#include "Queue.h"
 #include <ctime>
 #include <iostream>
 
@@ -223,6 +225,34 @@ void test_destroynlist(void){
     TEST_ASSERT(sizeof(tmp) == 8);
 }
 
+void Queue_add(void){
+    arguments args;
+    args.a = 1;
+    args.b = 2;
+    Job *tmp = new Job("test",args);
+    Queue *myqueue = new Queue();
+    myqueue->push(tmp);
+    TEST_ASSERT(myqueue->front->myJob == tmp);
+    TEST_ASSERT(myqueue->size == 1);
+    delete myqueue;
+
+}
+
+void Queue_pop(void){
+    arguments args;
+    args.a = 1;
+    args.b = 2;
+    Job *tmp = new Job("test",args);
+    Queue *myqueue = new Queue();
+    myqueue->push(tmp);
+    Job *yo = myqueue->pop();
+
+    TEST_ASSERT(yo == tmp);
+    TEST_ASSERT(myqueue->size == 0);
+    delete myqueue;
+    delete yo;
+
+}
 
 TEST_LIST = {
     {"list_create",test_createlist},
@@ -239,6 +269,8 @@ TEST_LIST = {
     {"negativelist_create",test_createnlist},
     {"negativelist_insert",test_insertnlist},
     {"negativelist_pop",test_popnlist},
-    {"negativelist_destroy",test_destroynlist}, 
+    {"Queue_add",Queue_add}, 
+    {"Queue_pop",Queue_pop}, 
+
     {nullptr,nullptr},
 };

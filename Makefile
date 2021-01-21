@@ -8,6 +8,7 @@ LFLAGS	 = -lpthread
 
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+	g++ acutest.h Job.cpp Queue.cpp JobScheduler.cpp bucket.cpp negativeList.cpp hashTable.cpp list.cpp vertex.cpp BF.cpp tests.cpp -o tests -lpthread
 
 main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp -std=c++14

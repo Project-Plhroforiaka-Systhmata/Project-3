@@ -445,7 +445,7 @@ int main(int argc, char **argv){
         }
     }*/
 
-    for (int i = 0; i < hash->numBuckets; i++) {
+    for (int i = 0; i < hash->numBuckets; i++) {//TRAIN
 
         bucket *temp = hash->table[i];
         while(temp != NULL) {
@@ -493,7 +493,7 @@ int main(int argc, char **argv){
         }
     }
 
-    for (int i = 0; i < hash->numBuckets; i++) {
+    for (int i = 0; i < hash->numBuckets; i++) { //TRAIN
         bucket *temp = hash->table[i];
         while(temp != NULL) {
             for(int j = 0; j < temp->currentRecords; j++){

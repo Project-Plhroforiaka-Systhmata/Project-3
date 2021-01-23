@@ -11,18 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Job.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Job.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Job.h" beforeDir="false" afterPath="$PROJECT_DIR$/Job.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project-3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project-3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vertex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vertex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vertex.h" beforeDir="false" afterPath="$PROJECT_DIR$/vertex.h" afterDir="false" />
-    </list>
+    <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +79,7 @@
       <workItem from="1611172218154" duration="3191000" />
       <workItem from="1611225327291" duration="2641000" />
       <workItem from="1611312174225" duration="11537000" />
-      <workItem from="1611397112676" duration="20430000" />
+      <workItem from="1611397112676" duration="20585000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610659608842</created>
@@ -148,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611175156753</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="full train test">
+      <created>1611424848588</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611424848588</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +171,8 @@
     <MESSAGE value="queue full" />
     <MESSAGE value="full project and small fix" />
     <MESSAGE value="train and test correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="train and test correct" />
+    <MESSAGE value="full train test" />
+    <option name="LAST_COMMIT_MESSAGE" value="full train test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/Project-3/cmake-build-debug-coverage" NAME="Project_3 Coverage Results" MODIFIED="1610973907509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

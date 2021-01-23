@@ -3,11 +3,13 @@
 #include <iostream>
 #include <sstream>
 
-
 using namespace std;
+
+pthread_mutex_t lock;
 
 Job::Job(string myJob, arguments *funArgs): jobExe(myJob) {
     args = funArgs;
+    pthread_mutex_init(&lock, NULL);
 }
 
 
@@ -72,6 +74,9 @@ void Job::batchTrain(int batchSize, hashTable *hash, double h, string *batch) {
     batchErr = cost / batchSize;
 
     //LOCK THREAD
+    if (pthread_mutex_lock(&lock) != 0){
+        cout << "An error occurred while locking semaphore" << endl;
+    }
     w1 = w1 - h * wb1;
     w2 = w2 - h * wb2;
     if(batchErr < minErr){
@@ -80,6 +85,9 @@ void Job::batchTrain(int batchSize, hashTable *hash, double h, string *batch) {
         minw2 = w2;
     }
     //UNLOCK THREAD
+    if (pthread_mutex_unlock(&lock) != 0){
+        cout << "An error occurred while locking semaphore" << endl;
+    }
 }
 
 Job::~Job() {

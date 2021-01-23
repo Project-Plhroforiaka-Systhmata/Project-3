@@ -68,10 +68,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/treloubas76/CLionProjects/Project-3
+CMAKE_SOURCE_DIR = /home/dennis/CLionProjects/Project-3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/treloubas76/CLionProjects/Project-3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dennis/CLionProjects/Project-3/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-3/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -277,6 +277,33 @@ bucket.s: bucket.cpp.s
 bucket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/bucket.cpp.s
 .PHONY : bucket.cpp.s
+
+functions.o: functions.cpp.o
+
+.PHONY : functions.o
+
+# target to build an object file
+functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/functions.cpp.o
+.PHONY : functions.cpp.o
+
+functions.i: functions.cpp.i
+
+.PHONY : functions.i
+
+# target to preprocess a source file
+functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/functions.cpp.i
+.PHONY : functions.cpp.i
+
+functions.s: functions.cpp.s
+
+.PHONY : functions.s
+
+# target to generate assembly for a file
+functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-3.dir/build.make CMakeFiles/Project-3.dir/functions.cpp.s
+.PHONY : functions.cpp.s
 
 hashTable.o: hashTable.cpp.o
 
@@ -464,6 +491,9 @@ help:
 	@echo "... bucket.o"
 	@echo "... bucket.i"
 	@echo "... bucket.s"
+	@echo "... functions.o"
+	@echo "... functions.i"
+	@echo "... functions.s"
 	@echo "... hashTable.o"
 	@echo "... hashTable.i"
 	@echo "... hashTable.s"

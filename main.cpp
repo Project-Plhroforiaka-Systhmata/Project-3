@@ -11,6 +11,7 @@
 #include "BF.h"
 #include "cmath"
 #include "JobScheduler.h"
+#include "functions.h"
 
 
 using namespace std;
@@ -20,7 +21,7 @@ myVector<int> idfVoc(20, false);
 
 int main(int argc, char **argv){
     minErr = 10; w1 = 0; w2 = 0;
-    int numThreads = 1;
+    int numThreads = 4;
     JobScheduler sch(numThreads);
     string stopwords[194], specialChars[34];
     fstream fin;
@@ -403,7 +404,6 @@ int main(int argc, char **argv){
             for(int j = 0; j < temp->currentRecords; j++){
                 for(int i = 0; i < temp->records[j].spec->jsonWords->size; i++){
                     double temp_tfidf;
-                    //x1 += ((double)vert1->jsonWords->sBuffer[i][1]/vert1->jsonWords->size) * log(hash->size / idfVoc.buffer[vert1->jsonWords->sBuffer[i][0]]);
                     temp_tfidf=((double)temp->records[j].spec->jsonWords->sBuffer[i][1]/temp->records[j].spec->jsonWords->size) * log(hash->size / idfVoc.buffer[temp->records[j].spec->jsonWords->sBuffer[i][0]]);
                     int n=0;
                     while(temp->records[j].spec->tfidf[n]!=-1 && temp->records[j].spec->jsonWords->size != n) n++;
@@ -420,118 +420,18 @@ int main(int argc, char **argv){
     }
 
 
-    double b = 0.5, e = 2.71828, h = 0.01;
+    double b = 0.5, e = 2.71828;
     fin.open(argv[2], ios::in);
     int train_lines=0.6*sigmod_lines;
     int templines=0;
 
+
     //TRAIN
-    string *batchArray;
-    int batch = 0, maxBatch = 5;
-    batchArray = new string[maxBatch];
-
-    for (int i = 0; i < hash->numBuckets; i++) {//TRAIN
-
-        bucket *temp = hash->table[i];
-        while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                node *temp1;
-                temp1 = temp->records[j].spec->specList->head;
-                while(temp1 != NULL){
-
-                    if (temp1->spec->spec != temp->records[j].spec->spec && !temp1->spec->trained) {
-                        vertex *vert1, *vert2;
-                        vert1 = temp1->spec;
-                        vert2 = temp->records[j].spec;
-
-                        if (vert1 != nullptr && vert2 != nullptr) {
-                            string pair;
-                            pair = vert1->spec + "," + vert2->spec + ",1";
-                            batchArray[batch++] = pair;
-                            if(batch == maxBatch){
-                                arguments *args = new arguments;
-                                args->batch = batchArray;
-                                args->h = h;
-                                args->hash = hash;
-                                args->batchSize = batch;
-                                Job *newJob = new Job("batchTrain", args);
-                                sch.submit_job(newJob);
-                                batchArray = new string[maxBatch];
-                                batch = 0;
-                            }
-                        }
-
-                    }
-                    temp1 = temp1->next;
-                }
-                temp->records[j].spec->trained = 1;
-            }
-            temp = temp->next;
-        }
-    }
-
-    for (int i = 0; i < hash->numBuckets; i++) { //TRAIN
-        bucket *temp = hash->table[i];
-        while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                if(temp->records[j].spec->specList->trained) continue;
-                node *temp1 = temp->records[j].spec->specList->head;
-                while(temp1 != NULL) {
-                    lnode *temp2 = temp->records[j].spec->specList->negList->head;
-                    while (temp2 != NULL){
-                        //if(temp2->spec == this || temp2->spec->printed){
-                        if(temp2->spec->trained){
-                            temp2 = temp2->next;
-                            continue;
-                        }
-                        node *temp3 = temp2->spec->head;
-                        while(temp3 != NULL){
-                            vertex *vert1, *vert2;
-                            vert1 = temp1->spec;
-                            vert2 = temp3->spec;
-
-                            if (vert1 != nullptr && vert2 != nullptr) {
-                                string pair;
-                                pair = vert1->spec + "," + vert2->spec + ",0";
-                                batchArray[batch++] = pair;
-                                if(batch == maxBatch){
-                                    arguments *args = new arguments;
-                                    args->batch = batchArray;
-                                    args->h = h;
-                                    args->hash = hash;
-                                    args->batchSize = batch;
-                                    Job *newJob = new Job("batchTrain", args);
-                                    sch.submit_job(newJob);
-                                    batchArray = new string[maxBatch];
-                                    batch = 0;
-                                }
-                            }
-                            temp3 = temp3->next;
-                        }
-                        temp2 = temp2->next;
-                    }
-                    temp1 = temp1->next;
-                }
-                temp->records[j].spec->specList->trained = 1;
-            }
-            temp = temp->next;
-        }
-    }
-
-    if(batch != 0){
-        arguments *args = new arguments;
-        args->batch = batchArray;
-        args->h = h;
-        args->hash = hash;
-        args->batchSize = batch;
-        Job *newJob = new Job("batchTrain", args);
-        sch.submit_job(newJob);
-    }
-
+    train(hash, &sch);
+    sch.wait_all_tasks_finish();
 
 
     //TEST
-    cout<<minw1<<'\t'<<minw2<<endl;
 
     int sigmod_array[297652-sigmod_lines];
     for (int i=0;i<(297652-sigmod_lines);i++)
@@ -600,7 +500,6 @@ int main(int argc, char **argv){
                     if (pred<0.5 && vert1 != nullptr && vert2 != nullptr && vert1->specList != vert2->specList) {
                         //copy leftSpecId's list to rightSpecId's list
                         vert1->copyList(vert2->specList);
-                        cout<<"0"<<endl;
                     }
                     else
                     {
@@ -613,7 +512,6 @@ int main(int argc, char **argv){
                                 //list1->copyNegList(list2->negList);
                                 list1->negList->insert(list2);
                                 list2->negList->insert(list1);
-                                cout<<"1"<<endl;
                             }
                         }
                     }
@@ -625,100 +523,10 @@ int main(int argc, char **argv){
         }
         fin.close();
         threshold+=0.1;
-        for (int i = 0; i < hash->numBuckets; i++) {
-
-            bucket *temp = hash->table[i];
-            while(temp != NULL) {
-                for(int j = 0; j < temp->currentRecords; j++){
-                    node *temp1;
-                    temp1 = temp->records[j].spec->specList->head;
-                    while(temp1 != NULL){
-
-                        if (temp1->spec->spec != temp->records[j].spec->spec && !temp1->spec->trained) {
-                            vertex *vert1, *vert2;
-                            vert1 = temp1->spec;
-                            vert2 = temp->records[j].spec;
-
-                            if (vert1 != nullptr && vert2 != nullptr) {
-                                string pair;
-                                pair = vert1->spec + "," + vert2->spec + ",1";
-                                batchArray[batch++] = pair;
-                                if(batch == maxBatch){
-                                    arguments *args = new arguments;
-                                    args->batch = batchArray;
-                                    args->h = h;
-                                    args->hash = hash;
-                                    args->batchSize = batch;
-                                    Job *newJob = new Job("batchTrain", args);
-                                    sch.submit_job(newJob);
-                                    batchArray = new string[maxBatch];
-                                    batch = 0;
-                                }
-                            }
-
-                        }
-                        temp1 = temp1->next;
-                    }
-                    temp->records[j].spec->trained = 1;
-                }
-                temp = temp->next;
-            }
-        }
-
-        for (int i = 0; i < hash->numBuckets; i++) {
-            bucket *temp = hash->table[i];
-            while(temp != NULL) {
-                for(int j = 0; j < temp->currentRecords; j++){
-                    if(temp->records[j].spec->specList->trained) continue;
-                    node *temp1 = temp->records[j].spec->specList->head;
-                    while(temp1 != NULL) {
-                        lnode *temp2 = temp->records[j].spec->specList->negList->head;
-                        while (temp2 != NULL){
-                            //if(temp2->spec == this || temp2->spec->printed){
-                            if(temp2->spec->trained){
-                                temp2 = temp2->next;
-                                continue;
-                            }
-                            node *temp3 = temp2->spec->head;
-                            while(temp3 != NULL){
-                                vertex *vert1, *vert2;
-                                vert1 = temp1->spec;
-                                vert2 = temp3->spec;
-
-                                if (vert1 != nullptr && vert2 != nullptr) {
-                                    string pair;
-                                    pair = vert1->spec + "," + vert2->spec + ",0";
-                                    batchArray[batch++] = pair;
-                                    if(batch == maxBatch){
-                                        arguments *args = new arguments;
-                                        args->batch = batchArray;
-                                        args->h = h;
-                                        args->hash = hash;
-                                        args->batchSize = batch;
-                                        Job *newJob = new Job("batchTrain", args);
-                                        sch.submit_job(newJob);
-                                        batchArray = new string[maxBatch];
-                                        batch = 0;
-                                    }
-                                }
-                                temp3 = temp3->next;
-                            }
-                            temp2 = temp2->next;
-                        }
-                        temp1 = temp1->next;
-                    }
-                    temp->records[j].spec->specList->trained = 1;
-                }
-                temp = temp->next;
-            }
-        }
+        train(hash, &sch);
+        sch.wait_all_tasks_finish();
     }
     fin.open(argv[2], ios::in);
-
-    cout<<sigmod_lines<<endl;
-    cout<<lines_counter-sigmod_lines<<endl;
-    cout<<threshold<<endl;
-    cout<<minw1<<'\t'<<minw2<<endl;
 
 
     //VALIDATION
@@ -769,8 +577,11 @@ int main(int argc, char **argv){
         }
     }
     fin.close();
-    cout << success << endl;
+    cout << success << " " << templines<< endl;
     cout<<"success rate: "<<(double(success)/59530)*100<<"%"<<endl;
+
+    cout<<minw1<<'\t'<<minw2 << "\t" << minErr <<endl;
+
     sch.destroy_scheduler();
 
     delete hash;

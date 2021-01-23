@@ -1,6 +1,6 @@
-        -:    0:Source:/home/treloubas76/CLionProjects/Project-3/Job.cpp
-        -:    0:Graph:/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/Job.cpp.gcno
-        -:    0:Data:/home/treloubas76/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/Job.cpp.gcda
+        -:    0:Source:/home/dennis/CLionProjects/Project-3/Job.cpp
+        -:    0:Graph:/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/Job.cpp.gcno
+        -:    0:Data:/home/dennis/CLionProjects/Project-3/cmake-build-debug-coverage/CMakeFiles/Project_3.dir/Job.cpp.gcda
         -:    0:Runs:1
         -:    1:#include "Job.h"
         -:    2:#include <iostream>

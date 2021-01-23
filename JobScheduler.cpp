@@ -48,10 +48,16 @@ void thread_execute(){
                 cout << "An error occurred while locking semaphore" << endl;
             }
             delete toexecute;
-            executing = false;
             if (pthread_mutex_unlock(&lock1) != 0){
                 cout << "An error occurred while unlocking semaphore" << endl;
             }
+        }
+        if (pthread_mutex_lock(&lock1) != 0){
+            cout << "An error occurred while locking semaphore" << endl;
+        }
+        executing = false;
+        if (pthread_mutex_unlock(&lock1) != 0){
+            cout << "An error occurred while unlocking semaphore" << endl;
         }
 
     }

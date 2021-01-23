@@ -11,7 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="" />
+    <list default="true" id="1e4a5022-b7cb-4f60-88ac-94bab4c70f2b" name="Default Changelist" comment="bug fixes scheduler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobScheduler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/JobScheduler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project-3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project-3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,12 +54,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="Project-3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2013_camera_specs/ sigmod_large_labelled_dataset.csv" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_3" TARGET_NAME="Project-3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_3" RUN_TARGET_NAME="Project-3">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Project-3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2013_camera_specs/ sigmod_medium_labelled_dataset.csv" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_3" TARGET_NAME="Project-3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_3" RUN_TARGET_NAME="Project-3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -76,10 +78,10 @@
       <workItem from="1610970933382" duration="6225000" />
       <workItem from="1611159962395" duration="614000" />
       <workItem from="1611161968670" duration="6876000" />
-      <workItem from="1611172218154" duration="3191000" />
-      <workItem from="1611225327291" duration="2641000" />
-      <workItem from="1611312174225" duration="11537000" />
-      <workItem from="1611397112676" duration="20585000" />
+      <workItem from="1611172218154" duration="2846000" />
+      <workItem from="1611232563116" duration="288000" />
+      <workItem from="1611316305107" duration="28000" />
+      <workItem from="1611316480415" duration="3598000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610659608842</created>
@@ -130,21 +132,7 @@
       <option name="project" value="LOCAL" />
       <updated>1611055012783</updated>
     </task>
-    <task id="LOCAL-00008" summary="train and test correct">
-      <created>1611175156753</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1611175156753</updated>
-    </task>
-    <task id="LOCAL-00009" summary="full train test">
-      <created>1611424848588</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1611424848588</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,9 +158,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="queue full" />
     <MESSAGE value="full project and small fix" />
-    <MESSAGE value="train and test correct" />
-    <MESSAGE value="full train test" />
-    <option name="LAST_COMMIT_MESSAGE" value="full train test" />
+    <option name="LAST_COMMIT_MESSAGE" value="full project and small fix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/Project-3/cmake-build-debug-coverage" NAME="Project_3 Coverage Results" MODIFIED="1610973907509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -16,7 +16,8 @@ pthread_mutex_t lock1; //first mutex
 thread **threads;
 bool destroyThreads = false;
 int threadsTerminated = 0;
-
+bool executing = false;
+bool waitingalltasksfinish = false;
 
 Job *getJobInFIFO() {
     if (myqueue->size == 0)
@@ -35,16 +36,24 @@ void thread_execute(){
         if (pthread_mutex_lock(&lock1) != 0){
             cout << "An error occurred while locking semaphore" << endl;
         }
+        executing = true;
         Job *toexecute = getJobInFIFO();
-
-        if (toexecute != nullptr){
-            //toexecute call function reference
-            toexecute->executeJob();
-            delete toexecute;
-        }
         if (pthread_mutex_unlock(&lock1) != 0){
             cout << "An error occurred while unlocking semaphore" << endl;
         }
+        if (toexecute != nullptr){
+            //toexecute call function reference
+            toexecute->executeJob();
+            if (pthread_mutex_lock(&lock1) != 0){
+                cout << "An error occurred while locking semaphore" << endl;
+            }
+            delete toexecute;
+            executing = false;
+            if (pthread_mutex_unlock(&lock1) != 0){
+                cout << "An error occurred while unlocking semaphore" << endl;
+            }
+        }
+
     }
     if (destroyThreads){
         threadsTerminated++;
@@ -90,6 +99,9 @@ JobScheduler *JobScheduler::initialize_scheduler(int numThreads) {
 }
 
 int JobScheduler::submit_job( Job *j) {
+    if (waitingalltasksfinish){
+        cout << "Scheduler: Job " << j->jobExe << " ignored because it was submitted while waiting for all tasks to finish!!" << endl;
+    }
     if (pthread_mutex_lock(&lock1) != 0){
         cout << "An error occurred while locking semaphore" << endl;
     }
@@ -106,10 +118,14 @@ int JobScheduler::execute_all_jobs() {
 
 int JobScheduler::wait_all_tasks_finish() {
     // synchronize threads:
-    cout << "Main Thread: Waiting Threads to finish" << endl;
+    /* cout << "Main Thread: Waiting Threads to finish" << endl;
     for (int i  = 0 ; i < execution_threads; i++){
         threads[i]->join();
-    }
+    }*/
+    waitingalltasksfinish = true;
+    while (executing){}
+    while (myqueue->size >0){}
+    waitingalltasksfinish = false;
     return 0;
 }
 

@@ -26,6 +26,7 @@ int main(int argc, char **argv){
     fstream fin;
     //string str;
     fin.open("stopwords", ios::in);
+
     string line;
     int ind = 0;
     while (getline(fin, line)){
@@ -56,7 +57,10 @@ int main(int argc, char **argv){
     strcpy(path,argv[1]);
     strcat(path,"/");
     dirp2 = opendir(argv[1]);
-
+    if (dirp2 == nullptr){
+        cout << "Camera Specs Folder Not Found" << endl;
+        return -1;
+    }
 
     while ((entry2 = readdir(dirp2)) != NULL) {
         strcpy(path,argv[1]);
@@ -426,7 +430,7 @@ int main(int argc, char **argv){
     int batch = 0, maxBatch = 5;
     batchArray = new string[maxBatch];
 
-    for (int i = 0; i < hash->numBuckets; i++) {
+    for (int i = 0; i < hash->numBuckets; i++) {//TRAIN
 
         bucket *temp = hash->table[i];
         while(temp != NULL) {
@@ -466,7 +470,7 @@ int main(int argc, char **argv){
         }
     }
 
-    for (int i = 0; i < hash->numBuckets; i++) {
+    for (int i = 0; i < hash->numBuckets; i++) { //TRAIN
         bucket *temp = hash->table[i];
         while(temp != NULL) {
             for(int j = 0; j < temp->currentRecords; j++){

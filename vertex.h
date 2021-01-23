@@ -5,11 +5,13 @@
 #include "vector.h"
 
 using namespace std;
+extern myVector<int> idfVoc;
 
 class vertex {
 public:
     int printed,trained;
     string spec, itemSpecs;
+    double *tfidf, value;
     myVector<int> *jsonWords;
     list *specList;
     vertex(string, string);

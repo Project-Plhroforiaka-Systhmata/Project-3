@@ -12,6 +12,7 @@ public:
     myVector(int, bool);
     int pushBack(T, int = 0);
     void expand(int);
+    void resize(int);
     ~myVector();
 };
 
@@ -85,6 +86,26 @@ myVector<T>::~myVector() {
 
 }
 
+template<class T>
+void myVector<T>::resize(int newCapacity) {
+    if(!sparse) {
+        T *newBuffer = new T[newCapacity];
+        maxCapacity = newCapacity;
+        delete []buffer;
+        buffer = newBuffer;
+    } else {
+        T **newBuffer = new T*[newCapacity];
+        for(int i = 0; i < newCapacity; i++){
+            newBuffer[i] = new T[2];
+        }
+        for (int i = 0; i < maxCapacity; i++) {
+            delete[]sBuffer[i];
+        }
+        delete []sBuffer;
+        maxCapacity = newCapacity;
+        sBuffer = newBuffer;
+    }
+}
 
 
 #endif

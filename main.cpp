@@ -8,7 +8,7 @@
 #include <regex>
 #include <string>
 #include "hashTable.h"
-#include "BF.h"
+//#include "BF.h"
 #include "cmath"
 #include "JobScheduler.h"
 #include "functions.h"
@@ -21,353 +21,29 @@ myVector<int> idfVoc(20, false);
 
 int main(int argc, char **argv){
     minErr = 10; w1 = 0; w2 = 0;
-    int numThreads = 4;
+    int numThreads = 1;
     JobScheduler sch(numThreads);
+
     string stopwords[194], specialChars[34];
-    fstream fin;
-    //string str;
-    fin.open("stopwords", ios::in);
+    preprocess(stopwords,specialChars);
 
-    string line;
-    int ind = 0;
-    while (getline(fin, line)){
-        stopwords[ind++] = line;
-    }
-    fin.close();
-
-    fin.open("specialChars", ios::in);
-    ind = 0;
-    while (getline(fin, line)){
-        specialChars[ind++] = line;
-    }
-    fin.close();
-
-    int worlds=0,sigmod_lines=0;;
+    int worlds=0,sigmod_lines=0;
     myVector<string> voc(91000, false);
     auto *hash = new hashTable(10000);
-    FILE *fp;
-    DIR *dirp2,*dirp3;
-    struct dirent * entry2;
-    struct dirent * entry3;
-    string specs;
-    char path[200],path2[200], path3[200], realPath[200], fline[100];
-    if (argv[1] == nullptr){
-        cout << "Please insert json files path!" << endl;
-        exit(-1);
-    }
-    strcpy(path,argv[1]);
-    strcat(path,"/");
-    dirp2 = opendir(argv[1]);
-    if (dirp2 == nullptr){
-        cout << "Camera Specs Folder Not Found" << endl;
-        return -1;
-    }
 
-    while ((entry2 = readdir(dirp2)) != NULL) {
-        strcpy(path,argv[1]);
+    worlds = jsonRead(argv[1], hash);
+    sigmod_lines = csvRead(hash, argv[2]);
 
-        if(entry2->d_name[0]=='.') continue;
+    fstream fin;
+    string word, leftSpecId, rightSpecId, label, line;
+    int lines_counter=0, count;
 
-        strcpy(path3, entry2->d_name);
-        strcat(path3,"/");
-        strcat(entry2->d_name,"/");
-        strcat(path,entry2->d_name);
-
-        dirp3 = opendir(path);
-        while ((entry3 = readdir(dirp3)) != NULL) {
-            specs="";
-            strcpy(path2,path);
-            strcpy(realPath,path3);
-
-            if(entry3->d_name[0]=='.') continue;
-            strcat(path2,entry3->d_name);
-            strcat(realPath,entry3->d_name);
-
-            fp = fopen(path2, "r");
-            while (fgets(fline, sizeof(fline), fp))
-            {
-                specs+=fline;
-                
-            }
-            fclose(fp);
-            char* pch;
-            char specs_string[specs.length()+1];
-            strcpy(specs_string,specs.c_str());
-            pch = strtok (specs_string," ");
-            while (pch != NULL)
-            {
-                string str;
-                str+=pch;
-                worlds++;
-                
-                pch = strtok (NULL, " ");
-            }
-
-
-            string name;
-            name += realPath;
-            name = regex_replace(name, regex("/"), "//");
-            name = regex_replace(name, regex(".json"), "");
-            hash->insert(name, new vertex(name, specs));
-        }
-        closedir(dirp3);
-
-    }
-    closedir(dirp2);
-
-
-    string word, leftSpecId, rightSpecId, label;
-    int lines_counter=0;
-    int count;
-    fin.open(argv[2], ios::in);
-    while (getline(fin, line)){
-        if(lines_counter==178592) break;
-        sigmod_lines++;
-        stringstream s(line);
-        count = 0;
-        while (getline(s, word, ',')) {
-            count++;
-
-            //split line by ',' and recognise leftSpecId, rightpecId and label
-            switch (count) {
-                case 1:
-                    leftSpecId = word;
-                    break;
-                case 2:
-                    rightSpecId = word;
-                    break;
-                default:
-                    label = word;
-            }
-        }
-
-        if (label == "1") {
-            vertex *vert1, *vert2;
-            vert1 = hash->search(leftSpecId);
-            vert2 = hash->search(rightSpecId);
-            //if leftSpecId and rightSpecId exist and are not already in the same list
-            if (vert1 != nullptr && vert2 != nullptr && vert1->specList != vert2->specList) {
-                //copy leftSpecId's list to rightSpecId's list
-                vert1->copyList(vert2->specList);
-            }
-        }
-        lines_counter++;
-    }
-    fin.close();
-
-    lines_counter=0;
-    fin.open(argv[2], ios::in);
-    while (getline(fin, line)){
-        if(lines_counter==178592) break;
-        stringstream s(line);
-        count = 0;
-        while (getline(s, word, ',')) {
-            count++;
-
-            //split line by ',' and recognise leftSpecId, rightpecId and label
-            switch (count) {
-                case 1:
-                    leftSpecId = word;
-                    break;
-                case 2:
-                    rightSpecId = word;
-                    break;
-                default:
-                    label = word;
-            }
-        }
-
-        if(label == "0") {
-
-            vertex *vert1, *vert2;
-            vert1 = hash->search(leftSpecId);
-            vert2 = hash->search(rightSpecId);
-
-            if (vert1 != nullptr && vert2 != nullptr) {
-                list *list1, *list2;
-                list1 = vert1->specList;
-                list2 = vert2->specList;
-                if(list1->negList != list2->negList) {
-                    //list1->copyNegList(list2->negList);
-                    list1->negList->insert(list2);
-                    list2->negList->insert(list1);
-                }
-            }
-        }
-        lines_counter++;
-    }
-    fin.close();
-
-    //print every vertex's list in the hashable
-    cout << "All positive matches\n" << endl;
-    for (int i = 0; i < hash->numBuckets; i++) {
-        bucket *temp = hash->table[i];
-        while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                temp->records[j].spec->printList();
-            }
-            temp = temp->next;
-        }
-    }
-
-    cout << "\n\nAll negative matches\n" << endl;
-    for (int i = 0; i < hash->numBuckets; i++) {
-        bucket *temp = hash->table[i];
-        while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                temp->records[j].spec->specList->printNegList();
-            }
-            temp = temp->next;
-        }
-    }
-
+    printMatches(hash);
 
     int numOfUpdates=5;
     BF* bf = new BF(worlds,numOfUpdates);
 
-    dirp2 = opendir(argv[1]);
-    while ((entry2 = readdir(dirp2)) != NULL) {
-        
-        strcpy(path,argv[1]);
-        if(entry2->d_name[0]=='.') continue;
-
-        strcpy(path3, entry2->d_name);
-        strcat(path3,"/");
-        strcat(entry2->d_name,"/");
-        strcat(path,entry2->d_name);
-        cout<<entry2->d_name<<endl;
-
-        dirp3 = opendir(path);
-        vertex* tmpvertex;
-        while ((entry3 = readdir(dirp3)) != NULL) {
-            specs="";
-            strcpy(path2,path);
-            strcpy(realPath,path3);
-            if(entry3->d_name[0]=='.') continue;
-
-            strcat(path2,entry3->d_name);
-            strcat(realPath,entry3->d_name);
-        
-            string searchPath;
-            searchPath+=realPath;
-            searchPath = regex_replace(searchPath, regex("/"), "//");
-            searchPath = regex_replace(searchPath, regex(".json"), "");
-            tmpvertex=hash->search(searchPath);
-
-            fp = fopen(path2, "r");
-            while (fgets(fline, sizeof(fline), fp))
-            {
-                int flineindex=-1;
-                for(int i=0;i<strlen(fline);i++)
-                {
-                    if(fline[i]=='"' && fline[i+1]==':')
-                    {
-                        flineindex=i+1;
-                        
-                        break;
-                    }
-                }
-                strcpy(fline,&fline[flineindex+1]);
-                specs+=fline;
-                
-            }
-            fclose(fp);
-            int index=0;
-            int vocIndex=-1;
-            int flag=0, flag1 = 0;
-            char* pch;
-            char specs_string[specs.length()+1];
-            strcpy(specs_string,specs.c_str());
-            pch = strtok (specs_string," ");
-            while (pch != NULL)
-            {
-                flag=0;
-                flag1 = 0;
-                string str;
-                str+=pch;
-                string chars;
-
-
-                for_each(str.begin(), str.end(), [](char & c){
-                    c = ::tolower(c);
-                });
-
-                for(auto & specialChar : specialChars) {
-                    chars += specialChar;
-                }
-
-                str.erase(remove_if(str.begin(), str.end(), [&chars](const char& c) {
-                    return chars.find(c) != string::npos;
-                }), str.end());
-
-
-                for(auto & stopword : stopwords) {
-                    if(str == stopword){
-                        flag1 = 1;
-                        break;
-                    }
-                }
-
-                str = regex_replace(str, regex("\n"), "");
-
-                if(flag1 || str == "\n" || str.empty()) {
-                    pch = strtok(NULL, " ");
-                    continue;
-                }
-
-                //insert words in vocabulary
-                strcpy(pch, str.c_str());
-
-                
-                if(!bf->find(pch))  //check in bf
-                {
-                    index=voc.pushBack(str);
-                    tmpvertex->jsonWords->pushBack(1,index);
-                    bf->insert(pch);
-                }
-                else
-                {
-                    for(int i=0;i<voc.size;i++)
-                    {
-                        if(voc.buffer[i]==str)
-                        {
-                            flag=1;
-                            vocIndex=i;
-                            break;
-                        }
-                    }             
-                    if(flag==0) // word doesn't exists
-                    {
-                        bf->insert(pch);
-                        index=voc.pushBack(str);
-                        tmpvertex->jsonWords->pushBack(1,index);
-                    }
-                    else    //word exists in voc but you should insert it in json's "voc"
-                    {
-                        int flagjson=0;
-                        for(int j=0;j<tmpvertex->jsonWords->size;j++)
-                        {
-                            if(tmpvertex->jsonWords->sBuffer[j][0]==vocIndex)
-                            {
-                                flagjson=1;
-                                (tmpvertex->jsonWords->sBuffer[j][1])++;
-                            }
-                            
-                        }
-                        if(flagjson==0)
-                        {
-                            tmpvertex->jsonWords->pushBack(1,vocIndex);
-                        }
-                    }
-                    
-                }
-                
-                pch = strtok (NULL, " ");
-            }
-        }
-        closedir(dirp3);
-    }
-    closedir(dirp2);
+    makeVectors(hash, argv[1], bf, stopwords, specialChars, voc);
 
     //idf voc initialization
     idfVoc.resize(voc.size);
@@ -573,7 +249,6 @@ int main(int argc, char **argv){
             if(pred>=threshold) pred=1;
             else pred=0;
             if(pred==y) success++;
-
         }
     }
     fin.close();

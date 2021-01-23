@@ -80,7 +80,7 @@ void Job::batchTrain(int batchSize, hashTable *hash, double h, string *batch) {
     w1 = w1 - h * wb1;
     w2 = w2 - h * wb2;
     if(batchErr < minErr){
-        minErr = err;
+        minErr = batchErr;
         minw1 = w1;
         minw2 = w2;
     }

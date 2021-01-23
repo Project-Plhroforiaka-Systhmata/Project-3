@@ -36,11 +36,27 @@ string
 vertex.h
 /home/dennis/CLionProjects/Project-3/vertex.h
 
+/home/dennis/CLionProjects/Project-3/functions.cpp
+functions.h
+/home/dennis/CLionProjects/Project-3/functions.h
+fstream
+-
+iostream
+-
+dirent.h
+-
+regex
+-
+cstdlib
+-
+
 /home/dennis/CLionProjects/Project-3/functions.h
 hashTable.h
 /home/dennis/CLionProjects/Project-3/hashTable.h
 JobScheduler.h
 /home/dennis/CLionProjects/Project-3/JobScheduler.h
+BF.h
+/home/dennis/CLionProjects/Project-3/BF.h
 
 /home/dennis/CLionProjects/Project-3/hashTable.h
 string
@@ -75,8 +91,6 @@ string
 -
 hashTable.h
 /home/dennis/CLionProjects/Project-3/hashTable.h
-BF.h
-/home/dennis/CLionProjects/Project-3/BF.h
 cmath
 /home/dennis/CLionProjects/Project-3/cmath
 JobScheduler.h

@@ -52,9 +52,7 @@ int main(int argc, char **argv){
 
     //TRAIN
     train(hash, &sch);
-    cout<<minw1<<'\t'<<minw2 << "\t" << minErr <<endl;
     sch.wait_all_tasks_finish();
-    cout<<minw1<<'\t'<<minw2 << "\t" << minErr <<endl;
 
     //TEST
     double threshold = 0.1;

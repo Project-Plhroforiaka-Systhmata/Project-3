@@ -1630,6 +1630,8 @@ test_is_tracer_present_(void)
 }
 #endif
 
+double w1, w2, minw1, minw2, minErr;
+
 int
 main(int argc, char** argv)
 {

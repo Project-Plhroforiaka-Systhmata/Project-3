@@ -15,7 +15,7 @@
 
 using namespace std;
 
-double minErr, w1, w2, minw1, minw2;
+double w1, w2, minw1, minw2, minErr;
 myVector<int> idfVoc(20, false);
 
 int main(int argc, char **argv){

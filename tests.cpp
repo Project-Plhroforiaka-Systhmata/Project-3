@@ -11,7 +11,8 @@
 #include "Queue.h"
 #include "JobScheduler.h"
 
-
+myVector<int> idfVoc(20,false);
+double w1, w2, minw1, minw2, minErr;
 
 void test_createlist(void){
     list *mylist = new list();
@@ -157,16 +158,16 @@ void test_BF_search(){
 
 void vector_test_insert(){
     myVector<int> *vec = new myVector<int>(150,false);
-    for (int i = 0; i < 10000; i++){
+    for (int i = 0; i < 1000; i++){
         vec->pushBack(i,true);
     }
-    TEST_ASSERT(vec->size == 10000);
+    TEST_ASSERT(vec->size == 1000);
     delete vec;
     myVector<int> *vec1 = new myVector<int>(150,true);
-    for (int i = 0; i < 10001; i++){
+    for (int i = 0; i < 1001; i++){
         vec1->pushBack(i,true);
     }
-    TEST_ASSERT(vec1->size == 10001);
+    TEST_ASSERT(vec1->size == 1001);
     delete vec1;
 }
 
@@ -228,23 +229,24 @@ void test_destroynlist(void){
 }
 
 void Queue_add(void){
-    arguments args;
-    args.a = 1;
-    args.b = 2;
-    Job *tmp = new Job("test",&args);
+    arguments *args = new arguments();
+    args->a = 1;
+    args->b = 2;
+    Job *tmp = new Job("test",args);
     Queue *myqueue = new Queue();
     myqueue->push(tmp);
     TEST_ASSERT(myqueue->front->myJob == tmp);
     TEST_ASSERT(myqueue->size == 1);
     delete myqueue;
+    
 
 }
 
 void Queue_pop(void){
-    arguments args;
-    args.a = 1;
-    args.b = 2;
-    Job *tmp = new Job("test",&args);
+    arguments *args = new arguments();
+    args->a = 1;
+    args->b = 2;
+    Job *tmp = new Job("test",args);
     Queue *myqueue = new Queue();
     myqueue->push(tmp);
     Job *yo = myqueue->pop();
@@ -256,46 +258,6 @@ void Queue_pop(void){
 
 }
 
-void test_scheduler(void) {
-    JobScheduler *sch = new JobScheduler(4);
-    arguments myargs;
-    myargs.a = 1;
-    myargs.b = 2;
-    Job *tmpjob1 = new Job("test",&myargs);
-    
-    sch->submit_job(tmpjob1);
-    myargs.a = 3;
-    myargs.b = 4;
-    Job *tmpjob2 = new Job("test",&myargs);
-    
-    sch->submit_job(tmpjob2);
-    myargs.a = 5;
-    myargs.b = 6;
-    Job *tmpjob3 = new Job("test",&myargs);
-    
-    sch->submit_job(tmpjob3);
-    myargs.a = 7;
-    myargs.b = 8;
-    Job *tmpjob4 = new Job("test",&myargs);
-    
-    sch->submit_job(tmpjob4);
-    myargs.a = 9;
-    myargs.b = 10;
-    Job *tmpjob5 = new Job("test",&myargs);
-    
-    sch->submit_job(tmpjob5);
-
-    sleep(2);
-    sch->destroy_scheduler();
-    delete tmpjob1;
-    delete tmpjob2;
-    delete tmpjob3;
-    delete tmpjob4;
-    delete tmpjob5;
-    delete sch;
-    
-
-};
 
 TEST_LIST = {
     {"list_create",test_createlist},
@@ -314,7 +276,6 @@ TEST_LIST = {
     {"negativelist_pop",test_popnlist},
     {"Queue_add",Queue_add}, 
     {"Queue_pop",Queue_pop}, 
-    {"Scheduler Testing",test_scheduler}, 
     
     {nullptr,nullptr},
 };

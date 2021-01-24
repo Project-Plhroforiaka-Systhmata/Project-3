@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/treloubas76/CLionProjects/Project-3/BF.cpp
-BF.h
-/home/treloubas76/CLionProjects/Project-3/BF.h
-
-/home/treloubas76/CLionProjects/Project-3/BF.h
+/home/dennis/CLionProjects/Project-3/BF.h
 cstring
 -
 
-/home/treloubas76/CLionProjects/Project-3/Job.cpp
+/home/dennis/CLionProjects/Project-3/Job.cpp
 Job.h
-/home/treloubas76/CLionProjects/Project-3/Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 cmath
 -
 iostream
@@ -24,15 +20,15 @@ iostream
 sstream
 -
 
-/home/treloubas76/CLionProjects/Project-3/Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 string
 -
 hashTable.h
-/home/treloubas76/CLionProjects/Project-3/hashTable.h
+/home/dennis/CLionProjects/Project-3/hashTable.h
 vector.h
-/home/treloubas76/CLionProjects/Project-3/vector.h
+/home/dennis/CLionProjects/Project-3/vector.h
 
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
+/home/dennis/CLionProjects/Project-3/JobScheduler.cpp
 iostream
 -
 thread
@@ -42,45 +38,45 @@ csignal
 unistd.h
 -
 JobScheduler.h
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+/home/dennis/CLionProjects/Project-3/JobScheduler.h
 Queue.h
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 ctime
-/home/treloubas76/CLionProjects/Project-3/ctime
+/home/dennis/CLionProjects/Project-3/ctime
 
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+/home/dennis/CLionProjects/Project-3/JobScheduler.h
 thread
 -
 queue
 -
 Queue.h
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 
-/home/treloubas76/CLionProjects/Project-3/Queue.cpp
+/home/dennis/CLionProjects/Project-3/Queue.cpp
 iostream
 -
 Queue.h
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 
-/home/treloubas76/CLionProjects/Project-3/Queue.h
+/home/dennis/CLionProjects/Project-3/Queue.h
 Job.h
-/home/treloubas76/CLionProjects/Project-3/Job.h
+/home/dennis/CLionProjects/Project-3/Job.h
 
-/home/treloubas76/CLionProjects/Project-3/bucket.cpp
+/home/dennis/CLionProjects/Project-3/bucket.cpp
 bucket.h
-/home/treloubas76/CLionProjects/Project-3/bucket.h
+/home/dennis/CLionProjects/Project-3/bucket.h
 iostream
 -
 
-/home/treloubas76/CLionProjects/Project-3/bucket.h
+/home/dennis/CLionProjects/Project-3/bucket.h
 string
 -
 vertex.h
-/home/treloubas76/CLionProjects/Project-3/vertex.h
+/home/dennis/CLionProjects/Project-3/vertex.h
 
-/home/treloubas76/CLionProjects/Project-3/functions.cpp
+/home/dennis/CLionProjects/Project-3/functions.cpp
 functions.h
-/home/treloubas76/CLionProjects/Project-3/functions.h
+/home/dennis/CLionProjects/Project-3/functions.h
 fstream
 -
 iostream
@@ -92,15 +88,15 @@ regex
 cstdlib
 -
 
-/home/treloubas76/CLionProjects/Project-3/functions.h
+/home/dennis/CLionProjects/Project-3/functions.h
 hashTable.h
-/home/treloubas76/CLionProjects/Project-3/hashTable.h
+/home/dennis/CLionProjects/Project-3/hashTable.h
 JobScheduler.h
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+/home/dennis/CLionProjects/Project-3/JobScheduler.h
 BF.h
-/home/treloubas76/CLionProjects/Project-3/BF.h
+/home/dennis/CLionProjects/Project-3/BF.h
 
-/home/treloubas76/CLionProjects/Project-3/hashTable.cpp
+/home/dennis/CLionProjects/Project-3/hashTable.cpp
 sstream
 -
 iostream
@@ -108,29 +104,29 @@ iostream
 regex
 -
 hashTable.h
-/home/treloubas76/CLionProjects/Project-3/hashTable.h
+/home/dennis/CLionProjects/Project-3/hashTable.h
 
-/home/treloubas76/CLionProjects/Project-3/hashTable.h
+/home/dennis/CLionProjects/Project-3/hashTable.h
 string
 -
 bucket.h
-/home/treloubas76/CLionProjects/Project-3/bucket.h
+/home/dennis/CLionProjects/Project-3/bucket.h
 
-/home/treloubas76/CLionProjects/Project-3/list.cpp
+/home/dennis/CLionProjects/Project-3/list.cpp
 list.h
-/home/treloubas76/CLionProjects/Project-3/list.h
+/home/dennis/CLionProjects/Project-3/list.h
 vertex.h
-/home/treloubas76/CLionProjects/Project-3/vertex.h
+/home/dennis/CLionProjects/Project-3/vertex.h
 iostream
 -
 
-/home/treloubas76/CLionProjects/Project-3/list.h
+/home/dennis/CLionProjects/Project-3/list.h
 string
 -
 negativeList.h
-/home/treloubas76/CLionProjects/Project-3/negativeList.h
+/home/dennis/CLionProjects/Project-3/negativeList.h
 
-/home/treloubas76/CLionProjects/Project-3/main.cpp
+/home/dennis/CLionProjects/Project-3/main.cpp
 cstdlib
 -
 iostream
@@ -150,37 +146,31 @@ regex
 string
 -
 hashTable.h
-/home/treloubas76/CLionProjects/Project-3/hashTable.h
+/home/dennis/CLionProjects/Project-3/hashTable.h
 cmath
-/home/treloubas76/CLionProjects/Project-3/cmath
+/home/dennis/CLionProjects/Project-3/cmath
 JobScheduler.h
-/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
+/home/dennis/CLionProjects/Project-3/JobScheduler.h
 functions.h
-/home/treloubas76/CLionProjects/Project-3/functions.h
+/home/dennis/CLionProjects/Project-3/functions.h
 
-/home/treloubas76/CLionProjects/Project-3/negativeList.cpp
-negativeList.h
-/home/treloubas76/CLionProjects/Project-3/negativeList.h
-
-/home/treloubas76/CLionProjects/Project-3/negativeList.h
+/home/dennis/CLionProjects/Project-3/negativeList.h
 string
 -
 
-/home/treloubas76/CLionProjects/Project-3/vector.cpp
+/home/dennis/CLionProjects/Project-3/vector.h
 
-/home/treloubas76/CLionProjects/Project-3/vector.h
-
-/home/treloubas76/CLionProjects/Project-3/vertex.cpp
+/home/dennis/CLionProjects/Project-3/vertex.cpp
 iostream
 -
 vertex.h
-/home/treloubas76/CLionProjects/Project-3/vertex.h
+/home/dennis/CLionProjects/Project-3/vertex.h
 
-/home/treloubas76/CLionProjects/Project-3/vertex.h
+/home/dennis/CLionProjects/Project-3/vertex.h
 string
 -
 list.h
-/home/treloubas76/CLionProjects/Project-3/list.h
+/home/dennis/CLionProjects/Project-3/list.h
 vector.h
-/home/treloubas76/CLionProjects/Project-3/vector.h
+/home/dennis/CLionProjects/Project-3/vector.h
 

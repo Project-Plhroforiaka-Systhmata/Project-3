@@ -5,7 +5,6 @@
 #include "vector.h"
 
 using namespace std;
-extern myVector<int> idfVoc;
 
 class vertex {
 public:

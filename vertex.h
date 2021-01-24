@@ -6,6 +6,8 @@
 
 using namespace std;
 
+extern myVector<int> idfVoc;
+
 class vertex {
 public:
     int printed,trained;

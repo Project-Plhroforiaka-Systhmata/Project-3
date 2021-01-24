@@ -124,7 +124,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration name="Project-3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2013_camera_specs/ sigmod_large_labelled_dataset.csv" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_3" TARGET_NAME="Project-3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_3" RUN_TARGET_NAME="Project-3">
+    <configuration name="Project-3" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2013_camera_specs/ sigmod_medium_labelled_dataset.csv" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_3" TARGET_NAME="Project-3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_3" RUN_TARGET_NAME="Project-3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

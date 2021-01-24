@@ -5,7 +5,7 @@
 #include "vector.h"
 
 extern double minErr, w1, w2, minw1, minw2;
-extern myVector<int> idfVoc;
+
 
 using namespace std;
 

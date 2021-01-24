@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/dennis/CLionProjects/Project-3/Job.h
+/home/treloubas76/CLionProjects/Project-3/Job.h
 string
 -
 
-/home/dennis/CLionProjects/Project-3/JobScheduler.cpp
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.cpp
 iostream
 -
 thread
@@ -20,21 +20,21 @@ csignal
 unistd.h
 -
 JobScheduler.h
-/home/dennis/CLionProjects/Project-3/JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 Queue.h
-/home/dennis/CLionProjects/Project-3/Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
 ctime
-/home/dennis/CLionProjects/Project-3/ctime
+/home/treloubas76/CLionProjects/Project-3/ctime
 
-/home/dennis/CLionProjects/Project-3/JobScheduler.h
+/home/treloubas76/CLionProjects/Project-3/JobScheduler.h
 thread
 -
 queue
 -
 Queue.h
-/home/dennis/CLionProjects/Project-3/Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
 
-/home/dennis/CLionProjects/Project-3/Queue.h
+/home/treloubas76/CLionProjects/Project-3/Queue.h
 Job.h
-/home/dennis/CLionProjects/Project-3/Job.h
+/home/treloubas76/CLionProjects/Project-3/Job.h
 

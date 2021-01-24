@@ -1,6 +1,7 @@
 {
     "git.ignoreLimitWarning": true,
     "files.associations": {
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "random": "cpp"
     }
 }

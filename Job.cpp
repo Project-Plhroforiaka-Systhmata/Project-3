@@ -1,7 +1,8 @@
-#include "Job.h"
 #include <cmath>
 #include <iostream>
 #include <sstream>
+#include "Job.h"
+
 
 using namespace std;
 

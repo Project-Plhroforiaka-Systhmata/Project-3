@@ -1,6 +1,6 @@
-OBJS	= main.o JobScheduler.o Job.o Queue.o vertex.o list.o bucket.o hashTable.o negativeList.o vector.o BF.o
-SOURCE	= main.cpp JobScheduler.cpp Job.cpp Queue.cpp vertex.cpp list.cpp bucket.cpp hashTable.cpp negativeList.cpp vector.cpp BF.cpp
-HEADER	= JobScheduler.h Job.h Queue.h vertex.h list.h bucket.h hashTable.h negativeList.h vector.h BF.h
+OBJS	= main.o functions.o JobScheduler.o Job.o Queue.o vertex.o list.o bucket.o hashTable.o negativeList.o vector.o BF.o
+SOURCE	= main.cpp functions.cpp JobScheduler.cpp Job.cpp Queue.cpp vertex.cpp list.cpp bucket.cpp hashTable.cpp negativeList.cpp vector.cpp BF.cpp
+HEADER	= functions.h JobScheduler.h Job.h Queue.h vertex.h list.h bucket.h hashTable.h negativeList.h vector.h BF.h
 OUT	= project3
 CC	 = g++
 FLAGS	 = -g -c -Wall
@@ -8,7 +8,10 @@ LFLAGS	 = -lpthread
 
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
-	g++ acutest.h Job.cpp Queue.cpp JobScheduler.cpp bucket.cpp negativeList.cpp hashTable.cpp list.cpp vertex.cpp BF.cpp tests.cpp -o tests -lpthread
+	g++ functions.cpp hashTable.cpp list.cpp vertex.cpp Job.cpp Queue.cpp JobScheduler.cpp bucket.cpp negativeList.cpp BF.cpp tests.cpp -o tests -lpthread
+
+functions.o: functions.cpp
+	$(CC) $(FLAGS) functions.cpp -std=c++14
 
 main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp -std=c++14

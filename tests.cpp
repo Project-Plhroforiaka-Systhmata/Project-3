@@ -1,3 +1,5 @@
+#include <ctime>
+#include <iostream>
 #include "list.h"
 #include "acutest.h"
 #include "hashTable.h"
@@ -7,9 +9,7 @@
 #include "BF.h"
 #include "Job.h"
 #include "Queue.h"
-#include <ctime>
-#include <iostream>
-
+#include "JobScheduler.h"
 
 void test_createlist(void){
     list *mylist = new list();
@@ -229,7 +229,7 @@ void Queue_add(void){
     arguments args;
     args.a = 1;
     args.b = 2;
-    Job *tmp = new Job("test",args);
+    Job *tmp = new Job("test",&args);
     Queue *myqueue = new Queue();
     myqueue->push(tmp);
     TEST_ASSERT(myqueue->front->myJob == tmp);
@@ -242,7 +242,7 @@ void Queue_pop(void){
     arguments args;
     args.a = 1;
     args.b = 2;
-    Job *tmp = new Job("test",args);
+    Job *tmp = new Job("test",&args);
     Queue *myqueue = new Queue();
     myqueue->push(tmp);
     Job *yo = myqueue->pop();
@@ -253,6 +253,47 @@ void Queue_pop(void){
     delete yo;
 
 }
+
+void test_scheduler(void) {
+    JobScheduler *sch = new JobScheduler(4);
+    arguments myargs;
+    myargs.a = 1;
+    myargs.b = 2;
+    Job *tmpjob1 = new Job("test",&myargs);
+    
+    sch->submit_job(tmpjob1);
+    myargs.a = 3;
+    myargs.b = 4;
+    Job *tmpjob2 = new Job("test",&myargs);
+    
+    sch->submit_job(tmpjob2);
+    myargs.a = 5;
+    myargs.b = 6;
+    Job *tmpjob3 = new Job("test",&myargs);
+    
+    sch->submit_job(tmpjob3);
+    myargs.a = 7;
+    myargs.b = 8;
+    Job *tmpjob4 = new Job("test",&myargs);
+    
+    sch->submit_job(tmpjob4);
+    myargs.a = 9;
+    myargs.b = 10;
+    Job *tmpjob5 = new Job("test",&myargs);
+    
+    sch->submit_job(tmpjob5);
+
+    sleep(2);
+    sch->destroy_scheduler();
+    delete tmpjob1;
+    delete tmpjob2;
+    delete tmpjob3;
+    delete tmpjob4;
+    delete tmpjob5;
+    delete sch;
+    
+
+};
 
 TEST_LIST = {
     {"list_create",test_createlist},
@@ -271,6 +312,7 @@ TEST_LIST = {
     {"negativelist_pop",test_popnlist},
     {"Queue_add",Queue_add}, 
     {"Queue_pop",Queue_pop}, 
-
+    {"Scheduler Testing",test_scheduler}, 
+    
     {nullptr,nullptr},
 };

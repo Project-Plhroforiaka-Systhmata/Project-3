@@ -10,16 +10,6 @@
 cstring
 -
 
-/home/dennis/CLionProjects/Project-3/Job.cpp
-Job.h
-/home/dennis/CLionProjects/Project-3/Job.h
-cmath
--
-iostream
--
-sstream
--
-
 /home/dennis/CLionProjects/Project-3/Job.h
 string
 -
@@ -27,22 +17,6 @@ hashTable.h
 /home/dennis/CLionProjects/Project-3/hashTable.h
 vector.h
 /home/dennis/CLionProjects/Project-3/vector.h
-
-/home/dennis/CLionProjects/Project-3/JobScheduler.cpp
-iostream
--
-thread
--
-csignal
--
-unistd.h
--
-JobScheduler.h
-/home/dennis/CLionProjects/Project-3/JobScheduler.h
-Queue.h
-/home/dennis/CLionProjects/Project-3/Queue.h
-ctime
-/home/dennis/CLionProjects/Project-3/ctime
 
 /home/dennis/CLionProjects/Project-3/JobScheduler.h
 thread
@@ -52,21 +26,9 @@ queue
 Queue.h
 /home/dennis/CLionProjects/Project-3/Queue.h
 
-/home/dennis/CLionProjects/Project-3/Queue.cpp
-iostream
--
-Queue.h
-/home/dennis/CLionProjects/Project-3/Queue.h
-
 /home/dennis/CLionProjects/Project-3/Queue.h
 Job.h
 /home/dennis/CLionProjects/Project-3/Job.h
-
-/home/dennis/CLionProjects/Project-3/bucket.cpp
-bucket.h
-/home/dennis/CLionProjects/Project-3/bucket.h
-iostream
--
 
 /home/dennis/CLionProjects/Project-3/bucket.h
 string
@@ -87,6 +49,8 @@ regex
 -
 cstdlib
 -
+cmath
+-
 
 /home/dennis/CLionProjects/Project-3/functions.h
 hashTable.h
@@ -96,63 +60,17 @@ JobScheduler.h
 BF.h
 /home/dennis/CLionProjects/Project-3/BF.h
 
-/home/dennis/CLionProjects/Project-3/hashTable.cpp
-sstream
--
-iostream
--
-regex
--
-hashTable.h
-/home/dennis/CLionProjects/Project-3/hashTable.h
-
 /home/dennis/CLionProjects/Project-3/hashTable.h
 string
 -
 bucket.h
 /home/dennis/CLionProjects/Project-3/bucket.h
 
-/home/dennis/CLionProjects/Project-3/list.cpp
-list.h
-/home/dennis/CLionProjects/Project-3/list.h
-vertex.h
-/home/dennis/CLionProjects/Project-3/vertex.h
-iostream
--
-
 /home/dennis/CLionProjects/Project-3/list.h
 string
 -
 negativeList.h
 /home/dennis/CLionProjects/Project-3/negativeList.h
-
-/home/dennis/CLionProjects/Project-3/main.cpp
-cstdlib
--
-iostream
--
-cstdio
--
-dirent.h
--
-cstring
--
-fstream
--
-sstream
--
-regex
--
-string
--
-hashTable.h
-/home/dennis/CLionProjects/Project-3/hashTable.h
-cmath
-/home/dennis/CLionProjects/Project-3/cmath
-JobScheduler.h
-/home/dennis/CLionProjects/Project-3/JobScheduler.h
-functions.h
-/home/dennis/CLionProjects/Project-3/functions.h
 
 /home/dennis/CLionProjects/Project-3/negativeList.h
 string

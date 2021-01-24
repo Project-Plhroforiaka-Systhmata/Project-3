@@ -110,7 +110,6 @@ void train(hashTable *hash, JobScheduler *sch){
         Job *newJob = new Job("batchTrain", args);
         sch->submit_job(newJob);
     }
-
 }
 
 void preprocess(string stopwords[], string specialChars[]){
